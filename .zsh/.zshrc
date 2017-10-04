@@ -3,8 +3,14 @@
 # http://mollifier.mit-license.org/
 
 ########################################
+
+# Read setting zsh
+for f (~/dotfiles/.peco/*.zsh) source "${f}"
+for f (~/dotfiles/.zsh/*.zsh) source "${f}"
+
 # enviroment
 export LANG=ja_JP.UTF-8
+
 
 # use color
 autoload -Uz colors
@@ -108,3 +114,5 @@ esac
 # cdr
 autoload -Uz add-zsh-hock
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+
+

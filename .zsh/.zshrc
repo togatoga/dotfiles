@@ -13,6 +13,9 @@ for f (~/dotfiles/.zsh/helper/*.zsh) source "${f}"
 # enviroment
 export LANG=ja_JP.UTF-8
 
+# zsh起動時にtmux起動
+[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
+
 # use color
 autoload -Uz colors
 colors
@@ -52,7 +55,8 @@ zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
 ########################################
-# 補完
+# Completion
+########################################
 autoload -Uz compinit
 compinit
 
@@ -70,7 +74,8 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 
 ########################################
-# オプション
+# Option
+########################################
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
 

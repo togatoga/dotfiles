@@ -8,3 +8,4 @@ function peco-ghq() {
     zle clear-screen
 }
 zle -N peco-ghq
+bindkey '^j' peco-ghq

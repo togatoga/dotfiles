@@ -8,3 +8,5 @@ function peco-cdr () {
     zle clear-screen
 }
 zle -N peco-cdr
+bindkey '^x' peco-cdr
+

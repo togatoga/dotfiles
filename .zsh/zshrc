@@ -3,17 +3,17 @@
 # http://mollifier.mit-license.org/
 
 ########################################
-# 環境変数
+# enviroment
 export LANG=ja_JP.UTF-8
 
-# 色を使用出来るようにする
+# use color
 autoload -Uz colors
 colors
 
-# emacs 風キーバインドにする
+# key bind emacs
 bindkey -e
 
-# ヒストリの設定
+# history
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -90,7 +90,7 @@ setopt hist_ignore_space
 setopt hist_reduce_blanks
 
 # 高機能なワイルドカード展開を使用する
-#setopt extended_glob
+setopt extended_glob
 
 ########################################
 case ${OSTYPE} in
@@ -105,3 +105,6 @@ case ${OSTYPE} in
 	;;
 esac
 
+# cdr
+autoload -Uz add-zsh-hock
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook

@@ -7,11 +7,10 @@
 ########################################
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # Read setting zsh
-for f (~/dotfiles/*/*.zsh) source "${f}"
+for f (~/dotfiles/.*/*.zsh) source "${f}"
 
 # enviroment
 export LANG=ja_JP.UTF-8
-
 
 # use color
 autoload -Uz colors
@@ -30,8 +29,22 @@ setopt hist_ignore_dups
 # 1行表示
 # PROMPT="%~ %# "
 # 2行表示
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
+PROMPT="%{${fg[green]}%}[%n]%{${reset_color}%} %~
 %# "
+
+########################################
+# vcs_info
+autoload -Uz vcs_info
+autoload -Uz add-zsh-hook
+
+zstyle ':vcs_info:*' formats '%F{green}(%s)-[%b]%f'
+zstyle ':vcs_info:*' actionformats '%F{red}(%s)-[%b|%a]%f'
+
+function _update_vcs_info_msg() {
+    LANG=en_US.UTF-8 vcs_info
+	RPROMPT="${vcs_info_msg_0_}"
+}
+add-zsh-hook precmd _update_vcs_info_msg
 
 # 単語の区切り文字を指定する
 autoload -Uz select-word-style

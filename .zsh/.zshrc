@@ -3,10 +3,11 @@
 # http://mollifier.mit-license.org/
 
 ########################################
-
+# PATH
+########################################
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 # Read setting zsh
-for f (~/dotfiles/.peco/*.zsh) source "${f}"
-for f (~/dotfiles/.zsh/*.zsh) source "${f}"
+for f (~/dotfiles/*/*.zsh) source "${f}"
 
 # enviroment
 export LANG=ja_JP.UTF-8

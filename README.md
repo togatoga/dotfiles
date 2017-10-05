@@ -1,7 +1,11 @@
-dotfiles [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tcnksm/dotfiles/blob/master/LICENCE)
+Dotfiles of togatoga by togatoga for togatoga [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tcnksm/dotfiles/blob/master/LICENCE)
 ====
 
-This repository is my dotfiles.
+*ATTENTION PLEASE*
+
+This repository is MY PERSONAL dotfiles.
+
+Thank you for your attention
 
 ### Setup
 

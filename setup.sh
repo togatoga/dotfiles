@@ -16,4 +16,4 @@ if test ! $(which rustc);then
 fi
 ./rust/get.sh
 
-
+./bootstrap.sh

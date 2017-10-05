@@ -56,4 +56,5 @@
   gn  = grep -n
 
   alias  = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ => \\2/' | sort
-
+[ghq]
+    root = ~/src

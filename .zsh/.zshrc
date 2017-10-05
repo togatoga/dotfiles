@@ -6,9 +6,11 @@
 # PATH
 ########################################
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+export DOTPATH=~/dotfiles
+
 # Read common setting zsh
-for f (~/dotfiles/.*/*.zsh) source "${f}"
-for f (~/dotfiles/.zsh/helper/*.zsh) source "${f}"
+for f ($DOTPATH/.*/*.zsh) source "${f}"
+for f ($DOTPATH/.zsh/helper/*.zsh) source "${f}"
 
 # Read private setting zsh
 if [ -e ~/private ];then

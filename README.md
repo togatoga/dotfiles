@@ -9,5 +9,5 @@ This repository is my dotfiles.
 $ git clone https://github.com/togatoga/dotfiles
 $ cp -r dotfiles ~/dotfiles
 $ cd dotfiles
-$ ./bootstraph.sh
+$ ./setup.sh
 ```

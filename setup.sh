@@ -16,4 +16,11 @@ if test ! $(which rustc);then
 fi
 ./rust/get.sh
 
+# tmux
+echo "Set up Tmux..."
+./.tmux/init.sh
+
 ./bootstrap.sh
+
+
+

@@ -6,9 +6,21 @@
 # PATH
 ########################################
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-# Read setting zsh
+# Read common setting zsh
 for f (~/dotfiles/.*/*.zsh) source "${f}"
 for f (~/dotfiles/.zsh/helper/*.zsh) source "${f}"
+
+# Read private setting zsh
+if [ -e ~/private ];then
+	for f (~/private/.*/*.zsh) source "${f}"
+fi
+
+# Read company setting zsh
+if [ -e ~/company ];then
+	for f (~/company/.*/*.zsh) source "${f}"
+fi
+
+
 
 # enviroment
 export LANG=ja_JP.UTF-8

@@ -4,6 +4,11 @@ if [ "$(uname)" == "Darwin" ];then
     ./homebrew/install.sh
 fi
 
+# Create ~/.config
+if [ ! -d ~/.config ];then
+	mkdir ~/.config
+fi
+
 # go
 echo "Set up Golang..."
 ./go/get.sh
@@ -14,7 +19,6 @@ if test ! $(which rustc);then
     echo "Install Rust..."
     ./rust/install.sh
 fi
-
 ./rust/get.sh
 
 # tmux

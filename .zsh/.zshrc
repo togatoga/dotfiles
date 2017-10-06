@@ -11,6 +11,7 @@ export DOTPATH=~/dotfiles
 # Read common setting zsh
 for f ($DOTPATH/.*/*.zsh) source "${f}"
 for f ($DOTPATH/.zsh/helper/*.zsh) source "${f}"
+source $DOTPATH/.zsh/.zplug.zsh
 
 # Read private setting zsh
 if [ -e ~/private ];then
@@ -130,5 +131,3 @@ esac
 # cdr
 autoload -Uz add-zsh-hock
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
-
-

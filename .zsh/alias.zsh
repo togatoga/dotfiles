@@ -15,4 +15,4 @@ alias .......="cd ../../../../../.."
 ################################
 # Advanced
 ################################
-alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias gh='hub browse $(ghq list | grep "github.com" | peco --prompt "[github]" | cut -d "/" -f 2,3)'

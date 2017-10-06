@@ -25,6 +25,7 @@ brew tap homebrew/versions
 brew tap homebrew/binary
 brew tap thoughtbot/formulae
 brew tap caskroom/fonts
+brew tap caskroom/cask
 
 packages=(
   #zsh
@@ -69,12 +70,21 @@ packages=(
   glide
   jq
   graphviz
+  emojify
+  autoenv
+  the_silver_searcher
+  highlight
+  z
+  terminal-notifier
 
   # Languages
   pyenv
   rbenv
   ruby-build
 )
+echo "installing emacs..."
+brew cask install emacs
 
 echo "installing binaries..."
 brew install ${packages[@]} && brew cleanup
+

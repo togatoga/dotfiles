@@ -77,6 +77,8 @@ packages=(
   z
   terminal-notifier
 
+  knqyf263/pet/pet
+
   # Languages
   pyenv
   rbenv

@@ -20,6 +20,10 @@ zplug "jocelynmallon/zshmarks", defer:1
 # autoenv
 zplug "Tarrasch/zsh-autoenv"
 
+# Tracks your most used directories, based on 'frecency'.
+zplug "rupa/z", use:"*.sh"
+
+
 # 未インストール項目をインストールする
 if ! zplug check --verbose; then
 	printf "Install? [Y/n]: "

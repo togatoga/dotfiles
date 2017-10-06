@@ -1,6 +1,10 @@
 # 少し凝った zshrc
 # License : MIT
 # http://mollifier.mit-license.org/
+
+# bind key emacs
+bindkey -e
+alias emacs='/usr/local/bin/emacs'
 export EDITOR="emacs"
 
 ########################################
@@ -38,8 +42,6 @@ export LANG=ja_JP.UTF-8
 autoload -Uz colors
 colors
 
-# key bind emacs
-bindkey -e
 
 # history
 HISTFILE=~/.zsh_history

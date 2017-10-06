@@ -8,3 +8,4 @@ ln -sf ~/dotfiles/.tmux/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.emacs.d ~/.emacs.d
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.peco/config.json ~/.config/peco/config.json

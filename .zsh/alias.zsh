@@ -1,16 +1,22 @@
 ################################
 # Basic
 ################################
-alias rm='rmtrash'
+alias path='echo $PATH | tr -s ":" "\n"'
+alias l="ls"
 alias mv="mv -i"
 alias cp="cp -i"
 
+alias ~="cd ~"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
+
+# Shortcuts
+alias dt="cd ~/Desktop"
+alias dl="cd ~/Downloads"
 
 ################################
 # Advanced

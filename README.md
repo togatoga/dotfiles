@@ -1,4 +1,4 @@
-Dotfiles of togatoga by togatoga for togatoga [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tcnksm/dotfiles/blob/master/LICENCE)
+Dotfiles [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tcnksm/dotfiles/blob/master/LICENCE)
 ====
 
 *ATTENTION PLEASE*

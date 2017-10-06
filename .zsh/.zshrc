@@ -2,6 +2,11 @@
 # License : MIT
 # http://mollifier.mit-license.org/
 
+# zsh起動時にtmux起動
+[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
+# LANG
+export LANG=ja_JP.UTF-8
+
 # bind key emacs
 bindkey -e
 alias emacs='/usr/local/bin/emacs'
@@ -30,13 +35,6 @@ if [ -e ~/company ];then
 	for f (~/company/.*/*.zsh) source "${f}"
 fi
 
-
-
-# enviroment
-export LANG=ja_JP.UTF-8
-
-# zsh起動時にtmux起動
-[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
 
 # use color
 autoload -Uz colors

@@ -14,5 +14,5 @@ function peco-z-search
   fi
 }
 zle -N peco-z-search
-bindkey '^p' peco-z-search
+bindkey '^w' peco-z-search
 

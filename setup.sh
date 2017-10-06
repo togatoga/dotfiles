@@ -20,7 +20,10 @@ fi
 echo "Set up Tmux..."
 ./.tmux/init.sh
 
+# zplug
+echo "Set up zplug..."
+if [ -d ~/.zplug ];then
+	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+fi
+
 ./bootstrap.sh
-
-
-

@@ -9,7 +9,7 @@ export LANG=ja_JP.UTF-8
 
 # bind key emacs
 bindkey -e
-alias emacs='/usr/local/bin/emacs'
+alias emacs='/usr/local/bin/emacs -nw'
 export EDITOR="emacs"
 
 ########################################

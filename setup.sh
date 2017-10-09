@@ -8,6 +8,8 @@ fi
 if [ ! -d ~/.config ];then
 	mkdir ~/.config
 fi
+# emacs
+pushd emacs.d && cask install && popd
 
 # go
 echo "Set up Golang..."

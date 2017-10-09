@@ -1,7 +1,6 @@
 alias gs="git status"
 alias gd="git diff"
 alias ga="git commit -am"
-alias gh="git branch"
 alias co="git checkout"
 
 function private() {

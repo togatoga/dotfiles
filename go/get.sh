@@ -10,6 +10,7 @@ PKGS=(
     golang.org/x/tools/cmd/goimports
     golang.org/x/tools/cmd/benchcmp
     golang.org/x/tools/cmd/present
+	github.com/ChimeraCoder/gojson/gojson
 
     # Golang dev
     github.com/nsf/gocode

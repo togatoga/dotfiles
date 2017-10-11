@@ -16,7 +16,7 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 
-alias cat="ccat --color=always --bg=dark"
+alias ccat="ccat --color=always --bg=dark"
 
 # Shortcuts
 alias dt="cd ~/Desktop"

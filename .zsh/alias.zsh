@@ -2,7 +2,9 @@
 # Basic
 ################################
 alias path='echo $PATH | tr -s ":" "\n"'
+alias ls="ls --color -F"
 alias l="ls"
+alias la="ls -a"
 alias mv="mv -i"
 alias cp="cp -i"
 

@@ -13,6 +13,7 @@ export LANG=ja_JP.UTF-8
 # bind key emacs
 bindkey -e
 alias emacs='/usr/local/bin/emacs -nw'
+
 # EDITOR
 export EDITOR="vim"
 
@@ -20,6 +21,10 @@ export EDITOR="vim"
 # PATH
 ########################################
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
+if [ -n $(brew --prefix coreutils) ];then
+	export PATH=$(brew --prefix coreutils)/libexec/gnubin:${PATH}
+	export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:${MANPATH}
+fi
 export DOTPATH=~/dotfiles
 
 # Read common setting zsh
@@ -123,17 +128,6 @@ setopt hist_reduce_blanks
 setopt extended_glob
 
 ########################################
-#ls
-case ${OSTYPE} in
-    darwin*)
-	alias ls='gls -F --color=auto'
-	;;
-    linux*)
-	#Linux用の設定
-	alias ls='ls -F --color=auto'
-	;;
-esac
-alias la='ls -A'
 
 # cdr
 autoload -Uz add-zsh-hock

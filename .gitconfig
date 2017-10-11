@@ -26,7 +26,8 @@
   cm  = commit -m
   cmb = "!f () { git commit -m \"$1 ($(git branch -a | grep '^*' | cut -b 3-))\";}; f"
 
-  b   = branch -a
+  b   = branch
+  ba  = branch -a
   br  = branch -r
 
   # https://github.com/paulirish/git-open
@@ -38,6 +39,7 @@
   master = checkout master
 
   d   = diff
+  dc  = diff --cached
   ds  = diff --staged
   dn  = diff --name-only
   dm  = diff master

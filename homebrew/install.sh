@@ -31,6 +31,9 @@ packages=(
   #zsh
   zsh
 
+  #gnu command
+  coreutils
+
   # tmux
   tmux
   reattach-to-user-namespace

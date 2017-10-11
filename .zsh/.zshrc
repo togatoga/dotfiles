@@ -123,18 +123,25 @@ setopt hist_reduce_blanks
 setopt extended_glob
 
 ########################################
+#ls
 case ${OSTYPE} in
     darwin*)
-	#Mac用の設定
-	export CLICOLOR=1
-	alias ls='ls -G -F'
+	alias ls='gls -F --color=auto'
 	;;
     linux*)
 	#Linux用の設定
 	alias ls='ls -F --color=auto'
 	;;
 esac
+alias la='ls -A'
 
 # cdr
 autoload -Uz add-zsh-hock
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+
+#less
+export LESS='-R'
+if [ -f /usr/local/bin/src-hilite-lesspipe.sh ];then
+	export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+fi
+

@@ -80,6 +80,7 @@ packages=(
   z
   terminal-notifier
   source-highlight
+  ccat
 
   knqyf263/pet/pet
 

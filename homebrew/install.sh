@@ -76,6 +76,7 @@ packages=(
   highlight
   z
   terminal-notifier
+  source-highlight
 
   knqyf263/pet/pet
 

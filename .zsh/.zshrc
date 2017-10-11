@@ -1,6 +1,9 @@
-# 少し凝った zshrc
-# License : MIT
-# http://mollifier.mit-license.org/
+# DETECT OS
+if [[ $(uname) = 'Darwin' ]]; then
+    IS_MAC=1
+elif [[ $(uname) = "Linux" ]];then
+    IS_LINUX=1
+fi
 
 # zsh起動時にtmux起動
 [[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux

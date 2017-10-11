@@ -56,5 +56,6 @@
   gn  = grep -n
 
   alias  = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ => \\2/' | sort
+	ignore = !([ ! -e .gitignore ] && touch .gitignore) | echo $1 >>.gitignore
 [ghq]
     root = ~/src

@@ -5,7 +5,7 @@ function peco-z-search
     echo "Please install peco and z"
     return 1
   fi
-  local res=$(z | sort -rn | cut -c 12- | peco --prompt "[dir]")
+  local res=$(z | sort -rn | cut -c 12- | peco --prompt "[dir]" --query "$LBUFFER")
   if [ -n "$res" ]; then
     BUFFER+="cd $res"
     zle accept-line

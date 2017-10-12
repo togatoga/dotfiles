@@ -1,10 +1,3 @@
-# zsh-competions
-if [ -f /usr/local/share/zsh-completions ];then
-	fpath=(/usr/local/share/zsh-completions $fpath)
-fi
-
-autoload -Uz compinit; compinit -u
-
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 

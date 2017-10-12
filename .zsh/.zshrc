@@ -21,9 +21,9 @@ export EDITOR="vim"
 # PATH
 ########################################
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-if [ -n $(brew --prefix coreutils) ];then
-	export PATH=$(brew --prefix coreutils)/libexec/gnubin:${PATH}
-	export MANPATH=$(brew --prefix coreutils)/libexec/gnuman:${MANPATH}
+if [ -n $IS_MAC ];then
+	export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+	export MANPATH="/usr/local/opt/coreutilslibexec/gnuman:${MANPATH}"
 fi
 export DOTPATH=~/dotfiles
 

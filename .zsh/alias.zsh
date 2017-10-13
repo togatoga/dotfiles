@@ -1,6 +1,7 @@
 ################################
 # Basic
 ################################
+alias reload='exec $SHELL -l'
 alias path='echo $PATH | tr -s ":" "\n"'
 alias ls="ls --color -F"
 alias l="ls"

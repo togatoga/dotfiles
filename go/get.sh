@@ -11,6 +11,7 @@ PKGS=(
     golang.org/x/tools/cmd/benchcmp
     golang.org/x/tools/cmd/present
 	github.com/ChimeraCoder/gojson/gojson
+	github.com/golang/dep/cmd/dep
 
     # Golang dev
     github.com/nsf/gocode

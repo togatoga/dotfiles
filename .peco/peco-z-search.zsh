@@ -12,6 +12,7 @@ function peco-z-search
   else
     return 1
   fi
+  zle clear-screen
 }
 zle -N peco-z-search
 bindkey '^w' peco-z-search

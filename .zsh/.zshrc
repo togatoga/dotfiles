@@ -32,7 +32,7 @@ for f ($DOTPATH/.*/*.zsh) source "${f}"
 for f ($DOTPATH/.zsh/helper/*.zsh) source "${f}"
 
 # Load zplug
-source $DOTPATH/.zsh/zplug/.zplug.zsh
+source $DOTPATH/.zsh/zplug/zplug.zsh
 
 # Read private setting zsh
 if [ -e ~/private ];then

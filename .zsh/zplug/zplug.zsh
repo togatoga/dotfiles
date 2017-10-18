@@ -25,11 +25,11 @@ zplug "rupa/z", use:"*.sh"
 
 
 # 未インストール項目をインストールする
-if ! zplug check --verbose; then
-	printf "Install? [Y/n]: "
-	if read -q; then
-		echo; zplug install
-	fi
-fi
+#if ! zplug check --verbose; then
+#	printf "Install? [Y/n]: "
+#	if read -q; then
+#		echo; zplug install
+#	fi
+#fi
 
-zplug load --verbose
+zplug load

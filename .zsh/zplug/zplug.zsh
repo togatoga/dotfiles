@@ -23,6 +23,9 @@ zplug "Tarrasch/zsh-autoenv"
 # Tracks your most used directories, based on 'frecency'.
 zplug "rupa/z", use:"*.sh"
 
+# enhanced
+zplug "b4b4r07/enhancd", use:init.sh
+export ENHANCD_COMMAND=ed
 
 # 未インストール項目をインストールする
 #if ! zplug check --verbose; then

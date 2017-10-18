@@ -7,7 +7,7 @@ function peco-z-search
   fi
   local res=$(z | sort -rn | cut -c 12- | peco --prompt "[dir]" --query "$LBUFFER")
   if [ -n "$res" ]; then
-    BUFFER+="cd $res"
+    BUFFER="cd $res"
     zle accept-line
   else
     return 1

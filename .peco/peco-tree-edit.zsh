@@ -1,4 +1,4 @@
-function peco-tree() {
+function peco-tree-edit() {
     local SELECTED_FILE=$(tree --charset=o -f | peco --query "$LBUFFER" | tr -d '\||`|-' | xargs echo)
     if [ "$SELECTED_FILE" != "" ]; then
 	BUFFER="$EDITOR $SELECTED_FILE"
@@ -8,5 +8,5 @@ function peco-tree() {
     zle reset-prompt
 }
 
-zle -N peco-tree
-bindkey "^t" peco-tree
+zle -N peco-tree-edit
+bindkey "^o" peco-tree-edit

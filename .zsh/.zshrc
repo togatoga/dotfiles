@@ -20,12 +20,14 @@ export EDITOR="vim"
 ########################################
 # PATH
 ########################################
+export DOTPATH=~/dotfiles
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
 if [ -n $IS_MAC ];then
 	export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
 	export MANPATH="/usr/local/opt/coreutilslibexec/gnuman:${MANPATH}"
 fi
-export DOTPATH=~/dotfiles
+
+export PATH="${DOTPATH}/bin:${PATH}"
 
 # Read common setting zsh
 for f ($DOTPATH/.*/*.zsh) source "${f}"

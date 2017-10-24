@@ -18,4 +18,5 @@ peco-chrome-history() {
   awk -F $sep '{printf "%-'$cols's  %s\n", $1, $2}' | 
   peco  | sed 's#.*\(https*://\)#\1#' | xargs $open > /dev/null 2> /dev/null
 }
-alias h="peco-chrome-history"
+zle -N peco-chrome-history
+bindkey '^[' peco-chrome-history

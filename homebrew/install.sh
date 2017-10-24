@@ -83,6 +83,7 @@ packages=(
   ccat
 
   knqyf263/pet/pet
+  s-search
 
   # Languages
   pyenv

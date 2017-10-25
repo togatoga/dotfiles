@@ -9,4 +9,4 @@ function peco-tree-edit() {
 }
 
 zle -N peco-tree-edit
-bindkey "^o" peco-tree-edit
+#bindkey "^o" peco-tree-edit

@@ -1,4 +1,8 @@
 # main view
 set main-view = id date author commit-title:graph=yes,refs=yes
 
+# L reflog
+bind generic L      !sh -c "git reflog --pretty=raw | tig --pretty=raw"
+# _ reset to signed number
+bind generic _      ?git reset --hard HEAD@{"%(prompt Enter HEAD@{} number: )"}
 

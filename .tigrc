@@ -6,3 +6,9 @@ bind generic L      !sh -c "git reflog --pretty=raw | tig --pretty=raw"
 # _ reset to signed number
 bind generic _      ?git reset --hard HEAD@{"%(prompt Enter HEAD@{} number: )"}
 
+# set line number
+set blob-view-line-number = yes
+set blame-view-line-number = yes
+
+# set refresh
+set refresh-mode = auto

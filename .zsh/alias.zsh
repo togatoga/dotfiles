@@ -27,6 +27,6 @@ alias dl="cd ~/Downloads"
 ################################
 # Advanced
 ################################
+alias e="emacs"
 alias gh='hub browse $(ghq list | grep "github.com" | peco --prompt "[github]" | cut -d "/" -f 2,3)'
-alias b='chrome-bookmark.rb'
 alias gist="gist -c -o -p"

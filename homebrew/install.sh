@@ -72,6 +72,7 @@ packages=(
   direnv
   glide
   jq
+  jid
   graphviz
   emojify
   autoenv

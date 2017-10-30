@@ -4,7 +4,7 @@
 
 
 /usr/bin/ruby -x "$0"                                          |
-  peco |
+  peco --prompt "[url]" |
   awk 'BEGIN { FS = "\t" } { print $2 }'                       |
   xargs open
 exit $?

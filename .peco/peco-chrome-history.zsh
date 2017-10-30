@@ -16,7 +16,8 @@ peco-chrome-history() {
     "select substr(title, 1, $cols), url
      from urls order by last_visit_time desc" |
   awk -F $sep '{printf "%-'$cols's  %s\n", $1, $2}' | 
-  peco  | sed 's#.*\(https*://\)#\1#' | xargs $open > /dev/null 2> /dev/null
+  peco  --prompt "[url]" | sed 's#.*\(https*://\)#\1#' | xargs $open > /dev/null 2> /dev/null
+
 }
 zle -N peco-chrome-history
 bindkey '^[' peco-chrome-history

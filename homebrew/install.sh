@@ -87,6 +87,7 @@ packages=(
   s-search
 
   # Languages
+  phpbrew
   pyenv
   rbenv
   ruby-build

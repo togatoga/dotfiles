@@ -20,6 +20,7 @@ if [ "${ANS}" = "Y" ]; then
 fi
 
 # Add Repository
+brew tap homebrew/php
 brew tap homebrew/dupes
 brew tap homebrew/versions
 brew tap homebrew/binary

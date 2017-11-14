@@ -3,6 +3,8 @@
 ################################
 alias reload='exec $SHELL -l'
 alias path='echo $PATH | tr -s ":" "\n"'
+alias ks="ls"
+alias sl="ls"
 alias ls="ls --color -F"
 alias l="ls"
 alias ll="ls -l"

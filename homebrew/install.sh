@@ -21,9 +21,6 @@ fi
 
 # Add Repository
 brew tap homebrew/php
-brew tap homebrew/dupes
-brew tap homebrew/versions
-brew tap homebrew/binary
 brew tap thoughtbot/formulae
 brew tap caskroom/fonts
 brew tap caskroom/cask

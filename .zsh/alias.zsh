@@ -11,6 +11,7 @@ alias ll="ls -l"
 alias la="ls -a"
 alias mv="mv -i"
 alias cp="cp -i"
+alias g="git"
 
 alias ~="cd ~"
 alias ..="cd .."

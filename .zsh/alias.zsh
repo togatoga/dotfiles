@@ -12,6 +12,7 @@ alias la="ls -a"
 alias mv="mv -i"
 alias cp="cp -i"
 alias g="git"
+alias t="tmux"
 
 alias ~="cd ~"
 alias ..="cd .."
@@ -22,6 +23,7 @@ alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 
 alias ccat="ccat --color=always --bg=dark"
+alias today="date +%Y%m%d"
 
 # Shortcuts
 alias dt="cd ~/Desktop"

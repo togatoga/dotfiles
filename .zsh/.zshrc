@@ -73,7 +73,8 @@ zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
 zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
-RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+#RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
+PROMPT='${vcs_info_msg_0_}'$PROMPT
 
 # 単語の区切り文字を指定する
 autoload -Uz select-word-style

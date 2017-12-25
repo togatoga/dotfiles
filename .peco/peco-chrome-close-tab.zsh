@@ -4,7 +4,18 @@ function peco-chrome-close-tab() {
         echo "Please install chrome-cli"
         return 1
     fi
-    local item=($(chrome-cli list tabs | peco --prompt "[close]" --query "${LBUFFER}"))
+     IFS=$'\n'
+    local links=($(chrome-cli list links | awk '{ print $2 }'))
+    local tabs=$(chrome-cli list tabs)
+    tabs=(${=tabs})
+    links=(${=links})
+    n=${#tabs}
+    item=''
+    for i in `seq 1 ${n}`;do
+        item=${item}${tabs[$i]}' '${links[$i]}'\n'
+    done
+    
+    local item=($(echo ${item} | peco --prompt "[close]" --query "${LBUFFER}"))
     
 	for id in $item;
     do

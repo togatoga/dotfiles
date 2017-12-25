@@ -83,6 +83,7 @@ packages=(
 
   knqyf263/pet/pet
   s-search
+  chrome-cli
 
   # Languages
   phpbrew

@@ -20,12 +20,11 @@ function peco-chrome-activate-tab() {
     if [ ${size} = '1' ];then
         local tab_id=${id[1]}
         chrome-cli activate -t ${tab_id}
+		open -a "Google Chrome"
     elif [ ${size} = '2' ];then
         local tab_id=${id[2]}
         chrome-cli activate -t ${tab_id}
-    fi
-    if [ ! -z ${tab_id} ];then
-        chrome-cli activate -t ${tab_id}
+		open -a "Google Chrome"
     fi
 }
 zle -N peco-chrome-activate-tab

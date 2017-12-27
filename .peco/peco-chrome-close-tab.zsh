@@ -33,4 +33,4 @@ function peco-chrome-close-tab() {
 	done
 }
 zle -N peco-chrome-close-tab
-bindkey '^w' peco-chrome-close-tab
+bindkey '^x^w' peco-chrome-close-tab

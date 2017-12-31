@@ -48,7 +48,7 @@
   d3  = diff HEAD~~~
   d4  = diff HEAD~~~~
   d5  = diff HEAD~~~~~
-
+  root = !git rev-parse --show-toplevel
 
   l   = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
   ll  = log --stat --abbrev-commit

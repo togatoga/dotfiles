@@ -61,3 +61,4 @@
   ignore = "!f() { echo $1 >> \"${GIT_PREFIX}.gitignore\";  }; f"
 [ghq]
     root = ~/src
+    root = ~/.go/src

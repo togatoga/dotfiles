@@ -12,6 +12,7 @@ PKGS=(
     golang.org/x/tools/cmd/present
 	github.com/ChimeraCoder/gojson/gojson
 	github.com/golang/dep/cmd/dep
+	github.com/togatoga/pe
 
     # Golang dev
     github.com/nsf/gocode
@@ -22,6 +23,7 @@ PKGS=(
     github.com/tools/godep
     github.com/motemen/gore
     github.com/tcnksm/ghr
+
 )
 
 for pkg in ${PKGS[@]}

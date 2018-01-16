@@ -13,6 +13,7 @@ PKGS=(
 	github.com/ChimeraCoder/gojson/gojson
 	github.com/golang/dep/cmd/dep
 	github.com/togatoga/pe
+	github.com/togatoga/cpm
 
     # Golang dev
     github.com/nsf/gocode

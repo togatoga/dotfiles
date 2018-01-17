@@ -1,6 +1,6 @@
 # search file
 function peco-find-file() {
-	if git rev-parse 2> /dev/null; then
+	if git rev-parse 2>/dev/null; then
 		source_files=$(git ls-files)
 	else
 		source_files=$(find . -type f)

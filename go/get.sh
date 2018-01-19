@@ -14,6 +14,7 @@ PKGS=(
 	github.com/golang/dep/cmd/dep
 	github.com/togatoga/pe
 	github.com/togatoga/cpm
+	mvdan.cc/sh/cmd/shfmt
 
     # Golang dev
     github.com/nsf/gocode
@@ -24,7 +25,6 @@ PKGS=(
     github.com/tools/godep
     github.com/motemen/gore
     github.com/tcnksm/ghr
-
 )
 
 for pkg in ${PKGS[@]}

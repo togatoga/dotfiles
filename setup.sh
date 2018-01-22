@@ -1,11 +1,11 @@
 #!/bin/bash
 
-if [ "$(uname)" == "Darwin" ];then
-    ./homebrew/install.sh
+if [ "$(uname)" == "Darwin" ]; then
+	./homebrew/install.sh
 fi
 
 # Create ~/.config
-if [ ! -d ~/.config ];then
+if [ ! -d ~/.config ]; then
 	mkdir ~/.config
 fi
 # emacs
@@ -13,16 +13,15 @@ pushd .emacs.d
 cask install
 popd
 
-
 # go
 echo "Set up Golang..."
 ./go/get.sh
 
 # rust
 echo "Set up Rust...."
-if test ! $(which rustc);then
-    echo "Install Rust..."
-    ./rust/install.sh
+if test ! $(which rustc); then
+	echo "Install Rust..."
+	./rust/install.sh
 fi
 ./rust/get.sh
 
@@ -32,8 +31,8 @@ echo "Set up Tmux..."
 
 # zplug
 echo "Set up zplug..."
-if [ ! -d ~/.zplug ];then
-	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+if [ ! -d ~/.zplug ]; then
+	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 fi
 
 ./link.sh

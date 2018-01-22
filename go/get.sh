@@ -3,31 +3,30 @@
 set -e
 
 PKGS=(
-    # General usage
-    github.com/motemen/ghq
+	# General usage
+	github.com/motemen/ghq
 
-    # Go cmd    
-    golang.org/x/tools/cmd/goimports
-    golang.org/x/tools/cmd/benchcmp
-    golang.org/x/tools/cmd/present
+	# Go cmd
+	golang.org/x/tools/cmd/goimports
+	golang.org/x/tools/cmd/benchcmp
+	golang.org/x/tools/cmd/present
 	github.com/ChimeraCoder/gojson/gojson
 	github.com/golang/dep/cmd/dep
 	github.com/togatoga/pe
 	github.com/togatoga/cpm
 	mvdan.cc/sh/cmd/shfmt
 
-    # Golang dev
-    github.com/nsf/gocode
-    github.com/rogpeppe/godef
-    github.com/dougm/goflymake
-    github.com/jstemmer/gotags
-    github.com/k0kubun/pp
-    github.com/tools/godep
-    github.com/motemen/gore
-    github.com/tcnksm/ghr
+	# Golang dev
+	github.com/nsf/gocode
+	github.com/rogpeppe/godef
+	github.com/dougm/goflymake
+	github.com/jstemmer/gotags
+	github.com/k0kubun/pp
+	github.com/tools/godep
+	github.com/motemen/gore
+	github.com/tcnksm/ghr
 )
 
-for pkg in ${PKGS[@]}
-do
-    go get -u -v $pkg
+for pkg in ${PKGS[@]}; do
+	go get -u -v $pkg
 done

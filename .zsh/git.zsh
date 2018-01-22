@@ -7,4 +7,3 @@ function private() {
 	git config --local user.email togasakitogatoga@gmail.com
 	git config --local user.name "togatoga"
 }
-

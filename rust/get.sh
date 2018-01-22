@@ -5,7 +5,6 @@ packages=(
 	racer
 )
 
-for pkg in ${packages[@]}
-do
+for pkg in ${packages[@]}; do
 	cargo install $pkg
 done

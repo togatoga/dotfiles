@@ -94,6 +94,9 @@ packages=(
 echo "installing emacs..."
 brew cask install emacs
 
+echo "installing mactex..."
+brew cask install mactex
+
 echo "installing binaries..."
 brew install ${packages[@]} && brew cleanup
 

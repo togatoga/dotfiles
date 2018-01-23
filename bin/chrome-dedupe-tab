@@ -45,3 +45,4 @@ if __name__ == "__main__":
 	result = result.decode("UTF-8")
 	links = result.split("\n")
 	dedup(links)
+	exit(0)

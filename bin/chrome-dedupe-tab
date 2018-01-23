@@ -1,0 +1,47 @@
+#!/usr/bin/env python
+import shutil
+import subprocess
+from collections import defaultdict
+
+def close(tab):
+	tab_id = 810
+	sep = ":"
+	tab = tab.strip("[]")
+	data = tab.split(sep)
+	if (sep not in tab):
+		tab_id = data[0]
+	else:
+		tab_id = data[1]
+
+	cmd = "chrome-cli close -t {}"
+	subprocess.call(cmd.format(tab_id), shell=True)
+
+def dedup(links):
+	values = defaultdict(str)
+	for link in links:
+		tmp = link.split(" ")
+		if (len(tmp) != 2):
+			continue
+		tab = tmp[0]
+		url = tmp[1]
+		values[url] = tab
+	for link in links:
+		tmp = link.split(" ")
+		if (len(tmp) != 2):
+			continue
+		tab = tmp[0]
+		url = tmp[1]
+		if (values[url] != tab):
+			print ("close ", url)
+			close(tab)
+
+
+if __name__ == "__main__":
+	print ("dedup... chrome tab")
+	if shutil.which("chrome-cli") == None:
+		print ("Please install chrome-cli")
+		exit(1)
+	result = subprocess.check_output("chrome-cli list links", shell=True)
+	result = result.decode("UTF-8")
+	links = result.split("\n")
+	dedup(links)

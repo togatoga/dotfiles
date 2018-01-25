@@ -12,3 +12,6 @@ set blame-view-line-number = yes
 
 # set refresh
 set refresh-mode = auto
+
+bind main    R !git rebase -i %(commit)
+bind diff    R !git rebase -i %(commit)

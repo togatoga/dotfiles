@@ -59,6 +59,7 @@
 
   alias  = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ => \\2/' | sort
   ignore = "!f() { echo $1 >> \"${GIT_PREFIX}.gitignore\";  }; f"
+	push-fwl = push --force-with-lease
 [ghq]
     root = ~/src
     root = ~/.go/src

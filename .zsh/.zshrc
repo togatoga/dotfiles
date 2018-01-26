@@ -135,6 +135,10 @@ setopt extended_glob
 # cdr
 autoload -Uz add-zsh-hock
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+zstyle ':chpwd:*' recent-dirs-max 5000
+zstyle ':chpwd:*' recent-dirs-default yes
+zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/shell/history_path"
+zstyle ':completion:*' recent-dirs-insert both
 
 #less
 export LESS='-R'

@@ -8,4 +8,4 @@ function peco-cdr() {
 	zle clear-screen
 }
 zle -N peco-cdr
-bindkey '^o' peco-cdr
+bindkey '^t' peco-cdr

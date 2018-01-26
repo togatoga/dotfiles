@@ -19,4 +19,4 @@ bind main    R !git rebase -i %(commit)
 bind diff    R !git rebase -i %(commit)
 
 # push
-bind generic P ?git push -u %(remote) %(repo:head)
+bind generic <Ctrl-P> ?git push -u %(remote) %(repo:head)

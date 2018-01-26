@@ -12,6 +12,11 @@ set blame-view-line-number = yes
 
 # set refresh
 set refresh-mode = auto
+bind generic <Ctrl-g> refresh
 
+# rebase
 bind main    R !git rebase -i %(commit)
 bind diff    R !git rebase -i %(commit)
+
+# push
+bind generic P ?git push -u %(remote) %(repo:head)

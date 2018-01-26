@@ -63,3 +63,11 @@
 [ghq]
     root = ~/src
     root = ~/.go/src
+[diff]
+  tool = meld
+[difftool "meld"]
+  cmd = meld $LOCAL $REMOTE
+[merge]
+  tool = meld
+[mergetool "meld"]
+  cmd = meld $LOCAL $BASE $REMOTE --auto-merge

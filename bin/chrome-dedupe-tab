@@ -16,7 +16,7 @@ def close(tab):
 	cmd = "chrome-cli close -t {}"
 	subprocess.call(cmd.format(tab_id), shell=True)
 
-def dedup(links):
+def dedupe(links):
 	values = defaultdict(str)
 	for link in links:
 		tmp = link.split(" ")
@@ -37,12 +37,12 @@ def dedup(links):
 
 
 if __name__ == "__main__":
-	print ("dedup... chrome tab")
+	print ("dedupe... chrome tab")
 	if shutil.which("chrome-cli") == None:
 		print ("Please install chrome-cli")
 		exit(1)
 	result = subprocess.check_output("chrome-cli list links", shell=True)
 	result = result.decode("UTF-8")
 	links = result.split("\n")
-	dedup(links)
+	dedupe(links)
 	exit(0)

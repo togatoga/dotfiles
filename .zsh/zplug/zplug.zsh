@@ -10,6 +10,13 @@ zplug "ascii-soup/zsh-url-highlighter", defer:3
 # completions
 zplug "zsh-users/zsh-completions", defer:2
 
+# autosuggestions
+zplug "zsh-users/zsh-autosuggestions", defer:2
+bindkey '^ ' autosuggest-accept
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+
+
 # bookmark
 zplug "jocelynmallon/zshmarks", defer:1
 

@@ -1,6 +1,9 @@
 # ------------------------------------
 # Docker
 # ------------------------------------
+# Docker alias
+alias d="docker"
+
 # Get latest container ID
 alias dl="docker ps -l -q"
 

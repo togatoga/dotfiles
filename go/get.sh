@@ -15,6 +15,7 @@ PKGS=(
 	github.com/togatoga/pe
 	github.com/togatoga/cpm
 	mvdan.cc/sh/cmd/shfmt
+	github.com/davecheney/httpstat
 
 	# Golang dev
 	github.com/nsf/gocode

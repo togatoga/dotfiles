@@ -22,6 +22,7 @@ export EDITOR="vim"
 ########################################
 export DOTPATH=~/dotfiles
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
+export PATH="/usr/local/sbin:$PATH"
 if [ -n $IS_MAC ];then
 	export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
 	export MANPATH="/usr/local/opt/coreutilslibexec/gnuman:${MANPATH}"
@@ -145,4 +146,3 @@ export LESS='-R'
 if [ -f /usr/local/bin/src-hilite-lesspipe.sh ];then
 	export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
-

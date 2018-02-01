@@ -13,4 +13,4 @@ function docker-build-vn() {
 	popd
 }
 
-alias vnt="docker run -it --rm vn python vn.py search $*"
+alias vnt="docker run -it --rm vn python vn.py translate $*"

@@ -12,5 +12,5 @@ function docker-build-vn() {
 	docker build --no-cache=true -t vn .
 	popd
 }
-
+alias vn="docker run -it --rm vn python vn.py"
 alias vnt="docker run -it --rm vn python vn.py translate $*"

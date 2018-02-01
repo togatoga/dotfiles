@@ -13,6 +13,10 @@ pushd .emacs.d
 cask install
 popd
 
+# python
+echo "Set up Python..."
+./python/get.sh
+
 # go
 echo "Set up Golang..."
 ./go/get.sh

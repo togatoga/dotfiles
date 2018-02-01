@@ -9,7 +9,7 @@ function docker-build-vn() {
 	fi
 	cd /tmp/vn
 	git pull origin master
-	docker build -t vn .
+	docker build --no-cache=true -t vn .
 	popd
 }
 

@@ -21,18 +21,19 @@ export EDITOR="vim"
 # PATH
 ########################################
 export DOTPATH=~/dotfiles
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
 if [ -n $IS_MAC ];then
 	export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
 	export MANPATH="/usr/local/opt/coreutilslibexec/gnuman:${MANPATH}"
+	export MANPATH="/usr/local/share/man:${MANPATH}"
 fi
-
 export PATH="${DOTPATH}/bin:${PATH}"
 
 # Read common setting zsh
 for f ($DOTPATH/.*/*.zsh) source "${f}"
 for f ($DOTPATH/.zsh/helper/*.zsh) source "${f}"
+for f ($DOTPATH/bin/*.zsh) source "${f}"
 
 # Load zplug
 source $DOTPATH/.zsh/zplug/zplug.zsh

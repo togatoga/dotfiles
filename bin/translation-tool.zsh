@@ -16,6 +16,7 @@ alias vn="docker run -it --rm vn python vn.py"
 alias vni="docker run -it --rm vn python vn.py translate --interactive"
 alias vnt="docker run -it --rm vn python vn.py translate $*"
 
+# https://github.com/soimort/translate-shell
 function translate() {
 	words=$@
 	result=$(is_japanese ${words})

@@ -37,4 +37,5 @@ alias v="vim"
 alias gh='hub browse $(ghq list | grep "github.com" | peco --prompt "[github]" | cut -d "/" -f 2,3)'
 alias gist="gist -c -o -p"
 
+# weather
 alias wx="curl -4 wttr.in/Tokyo"

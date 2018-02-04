@@ -20,7 +20,7 @@ alias vnt="docker run -it --rm vn python vn.py translate $*"
 function translate() {
 	words=$@
 	result=$(is_japanese ${words})
-	if [ $result -eq 1 ];then
+	if [ $result -eq 1 ]; then
 		trans ja:eng ${words}
 		return 0
 	fi

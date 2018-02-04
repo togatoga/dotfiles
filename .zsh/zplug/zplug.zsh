@@ -15,8 +15,6 @@ zplug "zsh-users/zsh-autosuggestions", defer:2
 bindkey '^ ' autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
-
-
 # bookmark
 zplug "jocelynmallon/zshmarks", defer:1
 

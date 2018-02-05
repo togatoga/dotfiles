@@ -4,10 +4,14 @@ set -e
 
 echo "installed...python lib"
 PKGS=(
-	#cli lib
+	#general
+	virtualenv
+
+	#cli
 	click
-	#color
+	#color print
 	crayons
+
 
 )
 

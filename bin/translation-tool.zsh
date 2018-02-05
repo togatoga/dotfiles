@@ -4,9 +4,8 @@
 
 function docker-build-vn() {
 	pushd
-	if [ ! -d "/tmp/vn" ]; then
-		git clone https://github.com/togatoga/vn /tmp/vn
-	fi
+	rm -rf "/tmp/vn"
+	git clone https://github.com/togatoga/vn /tmp/vn
 	cd /tmp/vn
 	git pull origin master
 	docker build --no-cache=true -t vn .

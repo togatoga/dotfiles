@@ -21,10 +21,10 @@ function translate() {
 	words=$@
 	result=$(is_japanese ${words})
 	if [ $result -eq 1 ]; then
-		trans ja:eng ${words}
+		trans ja:en ${words}
 		return 0
 	fi
-	trans eng:ja ${words}
+	trans en:ja ${words}
 }
 
 alias tre="trans :en+ja -emacs"

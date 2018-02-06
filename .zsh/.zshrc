@@ -23,7 +23,7 @@ export EDITOR="vim"
 export DOTPATH=~/dotfiles
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
-if [ -n $IS_MAC ];then
+if [ "$IS_MAC" -eq '1' ] ; then
 	export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
 	export MANPATH="/usr/local/opt/coreutilslibexec/gnuman:${MANPATH}"
 	export MANPATH="/usr/local/share/man:${MANPATH}"

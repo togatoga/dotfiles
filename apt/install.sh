@@ -21,7 +21,6 @@ packages=(
 	#zsh
 	zsh
 
-
 	# tmux
 	tmux
 
@@ -57,7 +56,6 @@ packages=(
 	readline
 	markdown
 	nkf
-	ag
 	glide
 	jq
 	jid
@@ -65,9 +63,10 @@ packages=(
 	autoenv
 	silversearcher-ag
 	highlight
-	z
 	source-highlight
 	translate-shell
+	xsel
+	jq
 
 	# Languages
 	pyenv

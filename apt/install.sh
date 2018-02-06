@@ -38,11 +38,13 @@ packages=(
 	# go
 	golang-1.9-go
 
-	# Emcas
-	cask
+	#ruby
+	rubygems
+
+	#sqlite
+	sqlite3
 
 	# Utils
-	peco
 	autoconf
 	proctools
 	automake
@@ -60,18 +62,14 @@ packages=(
 	jq
 	jid
 	graphviz
-	emojify
 	autoenv
-	the_silver_searcher
+	silversearcher-ag
 	highlight
 	z
 	source-highlight
-	ccat
-	s-search
 	translate-shell
 
 	# Languages
-	phpbrew
 	pyenv
 	rbenv
 	ruby-build

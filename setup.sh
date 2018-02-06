@@ -1,8 +1,14 @@
 #!/bin/bash
 
+# homebrew
 if [ "$(uname)" == "Darwin" ]; then
 	./homebrew/install.sh
 fi
+
+if [ "$(uname)" == "Linux" ]; then
+	./apt/install.sh
+fi
+
 
 # Create ~/.config
 if [ ! -d ~/.config ]; then

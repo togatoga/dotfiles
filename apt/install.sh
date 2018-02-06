@@ -2,26 +2,23 @@
 
 # Update homebrew recipes
 printf "Update recipes? [Y/n]: " && read ANS
-if [ "${ANS}" = "Y" ]; then
-	sudo apt-get update -y
+if [ "$ANS" = 'Y' ]; then
+	sudo apt-get update
 fi
 
 # Upgrade all
 printf "Upgrade? [Y/n]: " && read ANS
-if [ "${ANS}" = "Y" ]; then
-	sudo apt-get upgrade -y
+if [ "$ANS" = 'Y' ]; then
+	sudo apt-get upgrade 
 fi
 
 packages=(
 	#zsh
 	zsh
 
-	#gnu command
-	coreutils
 
 	# tmux
 	tmux
-	reattach-to-user-namespace
 
 	# git
 	git
@@ -54,7 +51,6 @@ packages=(
 	markdown
 	nkf
 	ag
-	direnv
 	glide
 	jq
 	jid
@@ -64,12 +60,9 @@ packages=(
 	the_silver_searcher
 	highlight
 	z
-	terminal-notifier
 	source-highlight
 	ccat
-	knqyf263/pet/pet
 	s-search
-	chrome-cli
 	translate-shell
 
 	# Languages
@@ -78,4 +71,8 @@ packages=(
 	rbenv
 	ruby-build
 )
-sudo apt-get install -y ${packages[@]} & sudo apt-get autoremove
+for pkg  in ${packages[@]};
+do
+	sudo apt-get install -y $pkg
+done
+sudo apt-get autoremove -y 

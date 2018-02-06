@@ -5,8 +5,10 @@ if [ "$(uname)" == "Darwin" ]; then
 	./homebrew/install.sh
 fi
 
+#apt-get,snap
 if [ "$(uname)" == "Linux" ]; then
 	./apt/install.sh
+	./snap/install.sh
 fi
 
 
@@ -26,11 +28,15 @@ echo "Set up Python..."
 # go
 echo "Set up Golang..."
 ./go/get.sh
-# peco
+
+# 
 if [ "$(uname)" == "Linux" ];then
 	echo "Set up peco..."
 	./.peco/install.sh
 fi
+
+echo "Set up Docker..."
+./docker/init.sh
 
 # rust
 echo "Set up Rust...."

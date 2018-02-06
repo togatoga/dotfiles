@@ -26,6 +26,11 @@ echo "Set up Python..."
 # go
 echo "Set up Golang..."
 ./go/get.sh
+# peco
+if [ "$(uname)" == "Linux" ];then
+	echo "Set up peco..."
+	./.peco/install.sh
+fi
 
 # rust
 echo "Set up Rust...."

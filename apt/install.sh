@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+
+# repository 
+sudo add-apt-repository ppa:gophers/archive
+
 # Update homebrew recipes
 printf "Update recipes? [Y/n]: " && read ANS
 if [ "$ANS" = 'Y' ]; then
@@ -31,7 +36,7 @@ packages=(
 	clang-format
 
 	# go
-	go
+	golang-1.9-go
 
 	# Emcas
 	cask

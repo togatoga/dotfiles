@@ -1,8 +1,7 @@
 #!/bin/bash
 
-if [ "$IS_LINUX" -eq '1' ]; then
+if [ "$(uname)" = 'Linux' ]; then
 	sudo groupadd docker
-	sudo gpasswd -a $USER docker
-	sudo systemctl restart docker
-
+	sudo usermod -aG docker $USER
+	sudo /bin/systemctl restart docker.service
 fi

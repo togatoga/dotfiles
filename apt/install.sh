@@ -1,8 +1,6 @@
 #!/bin/bash
 
-
-
-# repository 
+# repository
 sudo add-apt-repository ppa:gophers/archive
 
 # Update homebrew recipes
@@ -14,7 +12,7 @@ fi
 # Upgrade all
 printf "Upgrade? [Y/n]: " && read ANS
 if [ "$ANS" = 'Y' ]; then
-	sudo apt-get upgrade 
+	sudo apt-get upgrade
 fi
 
 packages=(
@@ -73,8 +71,7 @@ packages=(
 	rbenv
 	ruby-build
 )
-for pkg  in ${packages[@]};
-do
+for pkg in ${packages[@]}; do
 	sudo apt-get install -y $pkg
 done
-sudo apt-get autoremove -y 
+sudo apt-get autoremove -y

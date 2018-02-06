@@ -11,7 +11,6 @@ if [ "$(uname)" == "Linux" ]; then
 	./snap/install.sh
 fi
 
-
 # Create ~/.config
 if [ ! -d ~/.config ]; then
 	mkdir ~/.config
@@ -29,8 +28,8 @@ echo "Set up Python..."
 echo "Set up Golang..."
 ./go/get.sh
 
-# 
-if [ "$(uname)" == "Linux" ];then
+#
+if [ "$(uname)" == "Linux" ]; then
 	echo "Set up peco..."
 	./.peco/install.sh
 fi

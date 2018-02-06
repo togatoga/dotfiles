@@ -12,7 +12,6 @@ PKGS=(
 	#color print
 	crayons
 
-
 )
 
 for pkg in ${PKGS[@]}; do

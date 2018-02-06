@@ -141,6 +141,10 @@ zstyle ':chpwd:*' recent-dirs-max 5000
 zstyle ':chpwd:*' recent-dirs-default yes
 zstyle ':chpwd:*' recent-dirs-file "$HOME/.cache/shell/history_path"
 zstyle ':completion:*' recent-dirs-insert both
+if [ ! -d "$HOME/.cache/shell/history_path" ];then
+	mkdir -p $HOME/.cache/shell
+	touch  $HOME/.cache/shell/history_path
+fi
 
 #less
 export LESS='-R'

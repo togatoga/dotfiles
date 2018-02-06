@@ -13,7 +13,16 @@ exit $?
 # encoding: utf-8
 
 require 'json'
-FILE = '~/Library/Application Support/Google/Chrome/Default/Bookmarks'
+require 'rbconfig'
+
+host_os = RbConfig::CONFIG['host_os']
+FILE=""
+if host_os == "linux-gnu"
+	FILE = '~/.config/google-chrome/Default/Bookmarks'	
+else
+	FILE = '~/Library/Application Support/Google/Chrome/Default/Bookmarks'
+end
+
 CJK  = /\p{Han}|\p{Katakana}|\p{Hiragana}|\p{Hangul}/
 
 def build parent, json

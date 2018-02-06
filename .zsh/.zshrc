@@ -23,12 +23,20 @@ export EDITOR="vim"
 export DOTPATH=~/dotfiles
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
-if [ "$IS_MAC" -eq '1' ] ; then
+if [ "$(uname)" = 'Darwin' ] ; then
 	export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
 	export MANPATH="/usr/local/opt/coreutilslibexec/gnuman:${MANPATH}"
 	export MANPATH="/usr/local/share/man:${MANPATH}"
 fi
 export PATH="${DOTPATH}/bin:${PATH}"
+
+if [ "$(uname)" = 'Linux' ]; then
+    export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
+	export PATH="$HOME/.linuxbrew/bin:$PATH"
+	export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+	export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+	export XDG_DATA_DIRS="$HOME/.linuxbrew/share:$XDG_DATA_DIRS"
+fi
 
 # Read common setting zsh
 for f ($DOTPATH/.*/*.zsh) source "${f}"

@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # repository
-sudo add-apt-repository ppa:gophers/archive
+sudo add-apt-repository -y ppa:gophers/archive
+sudo add-apt-repository -y ppa:nilarimogard/webupd8
+
 
 # Update homebrew recipes
 printf "Update recipes? [Y/n]: " && read ANS
@@ -24,16 +26,10 @@ packages=(
 
 	# git
 	git
-	hub
-	tig
-	gist
 
 	# gcc
 	gcc
 	clang-format
-
-	# go
-	golang-1.9-go
 
 	#ruby
 	rubygems
@@ -41,7 +37,9 @@ packages=(
 	#sqlite
 	sqlite3
 
+
 	# Utils
+	albert
 	autoconf
 	proctools
 	automake
@@ -58,7 +56,6 @@ packages=(
 	jq
 	jid
 	graphviz
-	autoenv
 	silversearcher-ag
 	highlight
 	source-highlight

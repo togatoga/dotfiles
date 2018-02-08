@@ -38,7 +38,6 @@ packages=(
 
 	# tmux
 	tmux
-	reattach-to-user-namespace
 
 	# git
 	git
@@ -53,8 +52,6 @@ packages=(
 	# go
 	go
 
-	# Emcas
-	cask
 
 	# Utils
 	peco
@@ -70,23 +67,22 @@ packages=(
 	readline
 	markdown
 	nkf
-	ag
 	direnv
 	glide
 	jq
 	jid
 	graphviz
-	emojify
+
 	autoenv
 	the_silver_searcher
 	highlight
 	z
-	terminal-notifier
+
 	source-highlight
 	ccat
 	knqyf263/pet/pet
 	s-search
-	chrome-cli
+
 	translate-shell
 
 	# Languages
@@ -95,8 +91,28 @@ packages=(
 	rbenv
 	ruby-build
 )
+
+mac_packages=(
+    # tmux
+    reattach-to-user-namespace
+    # Emcas
+    cask
+
+    #utils
+    emojiyf
+    terminal-notifier
+    chrome-cli
+    
+)
+
 echo "installing emacs..."
 brew cask install emacs
 
 echo "installing binaries..."
 brew install ${packages[@]} && brew cleanup
+
+
+if [ "$(uname)" == 'Darwin' ];then
+    echo "installing binaries only for macOS"
+    brew install ${packages[@]} && brew cleanup
+fi

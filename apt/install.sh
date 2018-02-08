@@ -18,11 +18,11 @@ if [ "$ANS" = 'Y' ]; then
 fi
 
 packages=(
+	#general
+	build-essential
+
 	#zsh
 	zsh
-
-	# tmux
-	tmux
 
 	# git
 	git
@@ -37,36 +37,8 @@ packages=(
 	#sqlite
 	sqlite3
 
-
 	# Utils
 	albert
-	autoconf
-	proctools
-	automake
-	rmtrash
-	wget
-	curl
-	tree
-	openssl
-	libyaml
-	readline
-	markdown
-	nkf
-	glide
-	jq
-	jid
-	graphviz
-	silversearcher-ag
-	highlight
-	source-highlight
-	translate-shell
-	xsel
-	jq
-
-	# Languages
-	pyenv
-	rbenv
-	ruby-build
 )
 for pkg in ${packages[@]}; do
 	sudo apt-get install -y $pkg

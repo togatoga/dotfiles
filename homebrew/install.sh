@@ -3,7 +3,7 @@
 # Check for Homebrew, install if we don't have it
 if test ! $(which brew); then
 	echo "Installing homebrew..."
-	if [ "$(uname)" == 'Darwin' ];then
+	if [ "$(uname)" == 'Darwin' ]; then
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	fi
 	if [ "$(uname)" == 'Linux' ]; then
@@ -48,7 +48,6 @@ packages=(
 	# go
 	go
 
-
 	# Utils
 	peco
 	autoconf
@@ -65,17 +64,14 @@ packages=(
 	jq
 	jid
 	graphviz
-
 	autoenv
 	the_silver_searcher
 	highlight
 	z
-
 	source-highlight
 	ccat
 	knqyf263/pet/pet
 	s-search
-
 	translate-shell
 
 	# Languages
@@ -88,20 +84,20 @@ packages=(
 mac_packages=(
 	#gnu command
 	coreutils
-    # tmux
-    reattach-to-user-namespace
-    # Emcas
-    cask
+	# tmux
+	reattach-to-user-namespace
+	# Emcas
+	cask
 	# gcc
 	clang-format
-    #utils
+	#utils
 	rmtrash
 	automake
-    emojiyf
-    terminal-notifier
-    chrome-cli
+	emojiyf
+	terminal-notifier
+	chrome-cli
 	proctools
-    
+
 )
 
 echo "installing emacs..."
@@ -110,8 +106,7 @@ brew cask install emacs
 echo "installing binaries..."
 brew install ${packages[@]} && brew cleanup
 
-
-if [ "$(uname)" == 'Darwin' ];then
-    echo "installing binaries only for macOS"
-    brew install ${packages[@]} && brew cleanup
+if [ "$(uname)" == 'Darwin' ]; then
+	echo "installing binaries only for macOS"
+	brew install ${packages[@]} && brew cleanup
 fi

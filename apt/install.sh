@@ -4,7 +4,6 @@
 sudo add-apt-repository -y ppa:gophers/archive
 sudo add-apt-repository -y ppa:nilarimogard/webupd8
 
-
 # Update homebrew recipes
 printf "Update recipes? [Y/n]: " && read ANS
 if [ "$ANS" = 'Y' ]; then

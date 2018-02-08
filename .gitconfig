@@ -73,3 +73,5 @@
   cmd = meld $LOCAL $BASE $REMOTE --auto-merge
 [push]
 	default = simple
+[url "git@github.com:"]
+	insteadOf = https://github.com/

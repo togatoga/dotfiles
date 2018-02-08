@@ -2,11 +2,15 @@
 # vim: set filetype=ruby:
 # chrome-bookmark - browse Chrome bookmarks with peco
 
+open="open"
+if [ "$(uname)" = 'Linux' ]; then
+	open="xdg-open"
+fi
 
 /usr/bin/ruby -x "$0"                                          |
   peco --prompt "[url]" |
   awk 'BEGIN { FS = "\t" } { print $2 }'                       |
-  xargs open
+  xargs $open
 exit $?
 
 #!ruby

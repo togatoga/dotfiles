@@ -71,3 +71,5 @@
   tool = meld
 [mergetool "meld"]
   cmd = meld $LOCAL $BASE $REMOTE --auto-merge
+[push]
+	default = simple

@@ -8,7 +8,6 @@ fi
 #apt-get,snap
 if [ "$(uname)" == "Linux" ]; then
 	./apt/install.sh
-	./snap/install.sh
 fi
 
 # Create ~/.config

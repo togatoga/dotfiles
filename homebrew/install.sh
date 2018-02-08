@@ -33,9 +33,6 @@ packages=(
 	#zsh
 	zsh
 
-	#gnu command
-	coreutils
-
 	# tmux
 	tmux
 
@@ -47,7 +44,6 @@ packages=(
 
 	# gcc
 	gcc
-	clang-format
 
 	# go
 	go
@@ -56,9 +52,6 @@ packages=(
 	# Utils
 	peco
 	autoconf
-	proctools
-	automake
-	rmtrash
 	wget
 	curl
 	tree
@@ -93,15 +86,21 @@ packages=(
 )
 
 mac_packages=(
+	#gnu command
+	coreutils
     # tmux
     reattach-to-user-namespace
     # Emcas
     cask
-
+	# gcc
+	clang-format
     #utils
+	rmtrash
+	automake
     emojiyf
     terminal-notifier
     chrome-cli
+	proctools
     
 )
 

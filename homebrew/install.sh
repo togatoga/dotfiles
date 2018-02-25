@@ -73,6 +73,7 @@ packages=(
 	knqyf263/pet/pet
 	s-search
 	translate-shell
+	aspell
 
 	# Languages
 	phpbrew

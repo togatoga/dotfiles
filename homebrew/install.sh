@@ -74,6 +74,7 @@ packages=(
 	s-search
 	translate-shell
 	aspell
+	git-secrets
 
 	# Languages
 	phpbrew

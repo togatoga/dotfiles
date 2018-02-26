@@ -11,6 +11,8 @@ PKGS=(
 	click
 	#color print
 	crayons
+	# formatter
+	yapf
 
 )
 

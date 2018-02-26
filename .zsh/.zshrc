@@ -6,7 +6,7 @@ elif [[ $(uname) = "Linux" ]];then
 fi
 
 # zsh起動時にtmux起動
-[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
+#[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
 # LANG
 export LANG=ja_JP.UTF-8
 

@@ -15,3 +15,9 @@ $ cp -r dotfiles ~/dotfiles
 $ cd dotfiles
 $ ./setup.sh
 ```
+
+### Link 
+```bash
+$ cd dotfiles
+$ ./link.sh
+```

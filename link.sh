@@ -19,6 +19,7 @@ ln -sf ~/dotfiles/.emacs.d ~/.emacs.d
 ln -sf ~/dotfiles/.emacs.d/.init.el ~/.init.el
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
+ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
 
 mkdir -p ~/.config/peco/
 ln -sf ~/dotfiles/.peco/config.json ~/.config/peco/config.json

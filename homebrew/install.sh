@@ -75,6 +75,7 @@ packages=(
 	translate-shell
 	aspell
 	git-secrets
+	tldr
 
 	# Languages
 	phpbrew

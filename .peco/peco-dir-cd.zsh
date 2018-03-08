@@ -16,4 +16,4 @@ function peco-dir-cd() {
 	zle clear-screen
 }
 zle -N peco-dir-cd
-bindkey '^w' peco-dir-cd
+bindkey '^u' peco-dir-cd

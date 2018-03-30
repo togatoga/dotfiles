@@ -21,3 +21,10 @@ $ ./setup.sh
 $ cd dotfiles
 $ ./link.sh
 ```
+
+### Info
+```bash
+# zplug
+$ zplug install
+
+```

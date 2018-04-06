@@ -26,5 +26,5 @@ $ ./link.sh
 ```bash
 # zplug
 $ zplug install
-
+$ tmux
 ```

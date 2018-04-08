@@ -6,5 +6,5 @@ packages=(
 )
 
 for pkg in ${packages[@]}; do
-	cargo install $pkg
+	cargo install --force $pkg
 done

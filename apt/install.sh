@@ -38,6 +38,10 @@ packages=(
 
 	# Utils
 	albert
+
+	#perfomace
+	sysstat
+	strace
 )
 for pkg in ${packages[@]}; do
 	sudo apt-get install -y $pkg

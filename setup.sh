@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#.gitconfig.local
+printf "Do you install .gitconfig.local in this pc?" && read ANS
+if [ "${ANS}" == "Y" ]; then
+	cp .gitconfig.local ~/
+fi
+
 # homebrew
 if [ "$(uname)" == "Darwin" ]; then
 	./homebrew/install.sh

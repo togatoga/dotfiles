@@ -37,6 +37,8 @@ if [ "$(uname)" = 'Linux' ]; then
 	export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 	export XDG_DATA_DIRS="$HOME/.linuxbrew/share:$XDG_DATA_DIRS"
 fi
+# php
+export PATH="$PATH:$HOME/.composer/vendor/bin/"
 
 # Read common setting zsh
 for f ($DOTPATH/.*/*.zsh) source "${f}"

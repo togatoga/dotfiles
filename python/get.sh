@@ -13,6 +13,8 @@ PKGS=(
 	crayons
 	# formatter
 	yapf
+	
+	git+https://github.com/togatoga/vn.git 
 
 )
 

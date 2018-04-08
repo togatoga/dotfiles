@@ -67,7 +67,6 @@ packages=(
 	autoenv
 	the_silver_searcher
 	highlight
-	z
 	source-highlight
 	ccat
 	knqyf263/pet/pet
@@ -75,6 +74,7 @@ packages=(
 	translate-shell
 	aspell
 	git-secrets
+	tldr
 
 	# Languages
 	phpbrew
@@ -95,7 +95,6 @@ mac_packages=(
 	#utils
 	rmtrash
 	automake
-	emojiyf
 	terminal-notifier
 	chrome-cli
 	proctools
@@ -110,5 +109,5 @@ brew install ${packages[@]} && brew cleanup
 
 if [ "$(uname)" == 'Darwin' ]; then
 	echo "installing binaries only for macOS"
-	brew install ${packages[@]} && brew cleanup
+	brew install ${mac_packages[@]} && brew cleanup
 fi

@@ -1,6 +1,5 @@
-[user]
-  name = togatoga
-  email = togasakitogatoga@gmail.com
+[include]
+	path = ~/.gitconfig.local
 [color]
   status = auto
   diff = auto
@@ -75,3 +74,5 @@
 	default = simple
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[core]
+	excludesfile = ~/.gitignore_global

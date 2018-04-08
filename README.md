@@ -5,7 +5,7 @@ Dotfiles [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=
 
 This repository is MY PERSONAL dotfiles.
 
-Thank you for your attention
+Thank you for your attention.
 
 ### Setup
 
@@ -20,4 +20,10 @@ $ ./setup.sh
 ```bash
 $ cd dotfiles
 $ ./link.sh
+```
+
+### Info
+```bash
+# zplug
+$ zplug install
 ```

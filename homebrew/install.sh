@@ -75,6 +75,7 @@ packages=(
 	aspell
 	git-secrets
 	tldr
+	aria2
 
 	# Languages
 	phpbrew

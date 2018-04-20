@@ -76,6 +76,7 @@ packages=(
 	git-secrets
 	tldr
 	aria2
+	htop
 
 	# Languages
 	phpbrew

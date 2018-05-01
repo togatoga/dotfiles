@@ -24,7 +24,6 @@ if [ "${ANS}" = "Y" ]; then
 fi
 
 # Add Repository
-brew tap homebrew/php
 brew tap thoughtbot/formulae
 brew tap caskroom/fonts
 brew tap caskroom/cask
@@ -79,7 +78,6 @@ packages=(
 	htop
 
 	# Languages
-	phpbrew
 	pyenv
 	rbenv
 	ruby-build

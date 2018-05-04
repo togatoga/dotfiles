@@ -55,7 +55,7 @@ fi
 
 # Read company setting zsh
 if [ -e ~/company ];then
-	for f (~/company/.*/*.zsh) source "${f}"
+	for f (~/company/utils/*.zsh) source "${f}"
 fi
 
 

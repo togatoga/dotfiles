@@ -65,6 +65,7 @@ packages=(
 	graphviz
 	autoenv
 	the_silver_searcher
+	pt
 	highlight
 	source-highlight
 	ccat

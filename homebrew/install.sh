@@ -99,6 +99,7 @@ mac_packages=(
 	terminal-notifier
 	chrome-cli
 	proctools
+	urlview
 
 )
 

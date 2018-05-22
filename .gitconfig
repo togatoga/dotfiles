@@ -76,3 +76,4 @@
 	insteadOf = https://github.com/
 [core]
 	excludesfile = ~/.gitignore_global
+	escludesfile = ~/.gitignore_local

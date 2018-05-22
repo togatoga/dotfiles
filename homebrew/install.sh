@@ -65,6 +65,7 @@ packages=(
 	graphviz
 	autoenv
 	the_silver_searcher
+	pt
 	highlight
 	source-highlight
 	ccat
@@ -98,6 +99,7 @@ mac_packages=(
 	terminal-notifier
 	chrome-cli
 	proctools
+	urlview
 
 )
 

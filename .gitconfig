@@ -71,7 +71,7 @@
 [mergetool "meld"]
   cmd = meld $LOCAL $BASE $REMOTE --auto-merge
 [push]
-	default = simple
+	default = current
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [core]

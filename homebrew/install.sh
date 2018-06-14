@@ -77,6 +77,8 @@ packages=(
 	tldr
 	aria2
 	htop
+	doxygen
+
 
 	# Languages
 	pyenv

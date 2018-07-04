@@ -8,7 +8,7 @@ fi
 # zsh起動時にtmux起動
 #[[ -z "$TMUX" && ! -z "$PS1" ]] && exec tmux
 # LANG
-export LANG=ja_JP.UTF-8
+export LANG=en_US.UTF-8
 
 # bind key emacs
 bindkey -e

@@ -7,9 +7,7 @@ if [ "${ANS}" == "Y" ]; then
 fi
 
 # homebrew
-if [ "$(uname)" == "Darwin" ]; then
-	./homebrew/install.sh
-fi
+./homebrew/install.sh
 
 #apt-get,snap
 if [ "$(uname)" == "Linux" ]; then

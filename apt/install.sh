@@ -19,6 +19,9 @@ fi
 packages=(
 	#general
 	build-essential
+	#curl
+	curl
+	ibus-mozc
 
 	#zsh
 	zsh

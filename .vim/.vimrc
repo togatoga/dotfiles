@@ -47,12 +47,7 @@ set backspace=indent,eol,start
 nnoremap j gj
 nnoremap k gk
  
-" シンタックスを有効にする(コードをカラーを付けて見やすくする)
-syntax enable
  
-" カラー設定
-colorscheme torte
-
 " エンコーディングをutf8に設定
 set encoding=utf8
 

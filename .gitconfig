@@ -69,7 +69,7 @@
 [merge]
   tool = meld
 [mergetool "meld"]
-  cmd = meld $LOCAL $BASE $REMOTE --auto-merge
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE"
 [push]
 	default = current
 [url "git@github.com:"]

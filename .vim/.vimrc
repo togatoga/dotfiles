@@ -60,3 +60,7 @@ set title
 " ウィンドウの幅より長い行は折り返して表示
 set wrap
 imap <c-[> <esc>
+
+" 色
+syntax on
+

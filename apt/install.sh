@@ -31,6 +31,7 @@ packages=(
 
 	# gcc
 	gcc
+	clang
 	clang-format
 
 	#ruby

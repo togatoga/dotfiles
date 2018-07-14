@@ -3,6 +3,7 @@
 packages=(
 	rustfmt
 	racer
+	bat
 )
 
 for pkg in ${packages[@]}; do

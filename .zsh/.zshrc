@@ -21,6 +21,9 @@ export EDITOR="vim"
 # PATH
 ########################################
 export DOTPATH=~/dotfiles
+# Load zplug
+source $DOTPATH/.zsh/zplug/zplug.zsh
+
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
 if [ "$(uname)" = 'Darwin' ] ; then
@@ -42,9 +45,6 @@ fi
 for f ($DOTPATH/.*/*.zsh) source "${f}"
 for f ($DOTPATH/.zsh/helper/*.zsh) source "${f}"
 for f ($DOTPATH/bin/*.zsh) source "${f}"
-
-# Load zplug
-source $DOTPATH/.zsh/zplug/zplug.zsh
 
 # Read private setting zsh
 if [ -e ~/private ];then

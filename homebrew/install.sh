@@ -43,6 +43,7 @@ packages=(
 
 	# gcc
 	gcc
+	cmake
 
 	# go
 	go

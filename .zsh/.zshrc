@@ -12,7 +12,7 @@ export LANG=en_US.UTF-8
 
 # bind key emacs
 bindkey -e
-alias emacs='/usr/local/bin/emacs -nw'
+alias emacs='emacs -nw'
 
 # EDITOR
 export EDITOR="vim"

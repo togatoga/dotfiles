@@ -1,11 +1,11 @@
 # Change directory to the repo where fetched by peco
-function peco-ghq() {
-	local selected_dir=$(ghq list --full-path | peco --prompt '[repo]' --query "$LBUFFER")
+function fzf-ghq() {
+	local selected_dir=$(ghq list --full-path | fzf --query "$LBUFFER")
 	if [ -n "$selected_dir" ]; then
 		BUFFER="cd ${selected_dir}"
 		zle accept-line
 	fi
 	zle clear-screen
 }
-zle -N peco-ghq
-bindkey '^j' peco-ghq
+zle -N fzf-ghq
+bindkey '^j' fzf-ghq

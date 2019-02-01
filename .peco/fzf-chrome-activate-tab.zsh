@@ -1,4 +1,4 @@
-function peco-chrome-activate-tab() {
+function fzf-chrome-activate-tab() {
     which chrome-cli > /dev/null
     if [ $? -ne 0 ];then
         echo "Please install chrome-cli"
@@ -14,7 +14,7 @@ function peco-chrome-activate-tab() {
     for i in `seq 1 ${n}`;do
         item=${item}${tabs[$i]}' '${links[$i]}'\n'
     done
-    local id=$(echo ${item}| peco --prompt "[activate]" | grep -oE '\[[0-9:]*\]' | tr -d '\[\]')
+    local id=$(echo ${item}| fzf | grep -oE '\[[0-9:]*\]' | tr -d '\[\]')
     id=(${(s/:/)id})
     size=${#id[@]}
     if [ ${size} = '1' ];then
@@ -27,5 +27,5 @@ function peco-chrome-activate-tab() {
         open -a "Google Chrome"
     fi
 }
-zle -N peco-chrome-activate-tab
-bindkey '^\' peco-chrome-activate-tab
+zle -N fzf-chrome-activate-tab
+bindkey '^\' fzf-chrome-activate-tab

@@ -50,6 +50,7 @@ packages=(
 
 	# Utils
 	peco
+	fzf
 	autoconf
 	wget
 	curl

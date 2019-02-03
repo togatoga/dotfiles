@@ -1,7 +1,7 @@
-function fzf-select-history() {
-	BUFFER=$(\history -n -r 1 | fzf --query "$LBUFFER")
+function peco-select-history() {
+	BUFFER=$(\history -n -r 1 | peco --prompt "[history]" --query "$LBUFFER")
 	CURSOR=$#BUFFER
 	zle clear-screen
 }
-zle -N fzf-select-history
-bindkey '^r' fzf-select-history
+zle -N peco-select-history
+bindkey '^r' peco-select-history

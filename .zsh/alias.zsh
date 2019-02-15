@@ -44,4 +44,6 @@ if [ "$(uname)" = 'Linux' ]; then
 	alias pbcopy='xsel --clipboard --input'
 	alias pbpaste='xsel --clipboard --output'
 	alias open='xdg-open 2>/dev/null'
+else
+	alias grep="ggrep"
 fi

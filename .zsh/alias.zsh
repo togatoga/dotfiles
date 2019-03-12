@@ -41,7 +41,7 @@ alias gist="gist -c -o -p"
 # weather
 alias wx="curl -4 wttr.in/Tokyo"
 if [ "$(uname)" = 'Linux' ]; then
-	alias pbcopy='xsel --clipboard --input'
-	alias pbpaste='xsel --clipboard --output'
+	alias pbcopy='xclip -selection c'
+	alias pbpaste='xclip -o'
 	alias open='xdg-open 2>/dev/null'
 fi

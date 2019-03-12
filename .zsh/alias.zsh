@@ -44,4 +44,6 @@ if [ "$(uname)" = 'Linux' ]; then
 	alias pbcopy='xclip -selection c'
 	alias pbpaste='xclip -o'
 	alias open='xdg-open 2>/dev/null'
+else
+	alias grep="ggrep"
 fi

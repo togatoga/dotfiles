@@ -104,7 +104,7 @@ mac_packages=(
 	chrome-cli
 	proctools
 	urlview
-
+	ggrep
 )
 
 echo "installing emacs..."

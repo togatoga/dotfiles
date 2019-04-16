@@ -35,6 +35,7 @@ alias dl="cd ~/Downloads"
 ################################
 alias e="emacs"
 alias v="vim"
+alias vi="vim"
 alias gh='hub browse $(ghq list | grep "github.com" | peco --prompt "[github]" | cut -d "/" -f 2,3)'
 alias gist="gist -c -o -p"
 

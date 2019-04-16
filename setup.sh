@@ -6,13 +6,14 @@ if [ "${ANS}" == "Y" ]; then
 	cp .gitconfig.local ~/
 fi
 
-# homebrew
-./homebrew/install.sh
 
 #apt-get,snap
 if [ "$(uname)" == "Linux" ]; then
 	./apt/install.sh
 fi
+
+# homebrew
+./homebrew/install.sh
 
 # Create ~/.config
 if [ ! -d ~/.config ]; then

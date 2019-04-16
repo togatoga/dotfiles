@@ -19,9 +19,10 @@ fi
 packages=(
 	#general
 	build-essential
-	#curl
 	curl
 	ibus-mozc
+	vim
+	gnome-tweaks
 
 	#zsh
 	zsh

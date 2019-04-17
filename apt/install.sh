@@ -44,6 +44,7 @@ packages=(
 	# Utils
 	albert
 	xsel
+	xclip
 
 	#perfomace
 	sysstat

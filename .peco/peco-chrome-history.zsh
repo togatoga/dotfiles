@@ -9,6 +9,9 @@ peco-chrome-history() {
 		open=open
 	else
 		google_history="$HOME/.config/google-chrome/Default/History"
+		if [ ! -e $google_history ]; then
+			google_history="$HOME/.config/google-chrome/Profile 1/History"
+		fi
 		open=xdg-open
 	fi
 	cp -f "$google_history" /tmp/h

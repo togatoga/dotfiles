@@ -105,6 +105,8 @@ mac_packages=(
 	proctools
 	urlview
 	ggrep
+	# cross compile
+    FiloSottile/musl-cross/musl-cross
 )
 
 echo "installing emacs..."

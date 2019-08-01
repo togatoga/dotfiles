@@ -5,7 +5,7 @@ function fzf-find-file() {
 	else
 		source_files=$(find . -type f)
 	fi
-	selected_files=$(echo $source_files | fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
+	selected_files=$(echo $source_files | fzf --exact --preview '[[ $(file --mime {}) =~ binary ]] &&
                  echo {} is a binary file ||
                  (highlight -O ansi -l {} ||
                   coderay {} ||

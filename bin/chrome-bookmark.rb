@@ -24,7 +24,7 @@ file=""
 if host_os == "linux-gnu"
   file = '~/.config/google-chrome/Default/Bookmarks'
   if !File.exists?(file)
-    file = '~/.config/google-chrome/Profile 1/Bookmarks'
+    file = '~/.config/google-chrome/Default/Bookmarks'
   end
 else
 	file = '~/Library/Application Support/Google/Chrome/Default/Bookmarks'

@@ -107,6 +107,7 @@ mac_packages=(
 	ggrep
 	# cross compile
     FiloSottile/musl-cross/musl-cross
+    ripgrep	
 )
 
 echo "installing emacs..."

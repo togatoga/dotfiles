@@ -42,7 +42,6 @@ packages=(
 	gist
 
 	# gcc
-	gcc
 	cmake
 
 	# go
@@ -81,7 +80,6 @@ packages=(
 	htop
 	doxygen
 
-
 	# Languages
 	pyenv
 	rbenv
@@ -91,6 +89,7 @@ packages=(
 mac_packages=(
 	#gnu command
 	coreutils
+	gcc
 	# tmux
 	reattach-to-user-namespace
 	# Emcas

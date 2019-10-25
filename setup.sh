@@ -19,10 +19,6 @@ fi
 if [ ! -d ~/.config ]; then
 	mkdir ~/.config
 fi
-# emacs
-pushd .emacs.d
-cask install
-popd
 
 # python
 echo "Set up Python..."

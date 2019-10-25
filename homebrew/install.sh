@@ -26,7 +26,6 @@ fi
 # Add Repository
 brew tap thoughtbot/formulae
 brew tap caskroom/fonts
-brew tap caskroom/cask
 
 packages=(
 	#zsh
@@ -108,9 +107,6 @@ mac_packages=(
     FiloSottile/musl-cross/musl-cross
     ripgrep	
 )
-
-echo "installing emacs..."
-brew cask install emacs
 
 echo "installing binaries..."
 brew install ${packages[@]} && brew cleanup

@@ -41,6 +41,10 @@ if [ "$(uname)" = 'Linux' ]; then
 	export XDG_DATA_DIRS="$HOME/.linuxbrew/share:$XDG_DATA_DIRS"
 fi
 
+if type "direnv" > /dev/null 2>&1; then
+   eval "$(direnv hook zsh)"
+fi
+
 # Read common setting zsh
 for f ($DOTPATH/.*/*.zsh) source "${f}"
 for f ($DOTPATH/.zsh/helper/*.zsh) source "${f}"

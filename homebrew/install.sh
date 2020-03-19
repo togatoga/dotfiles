@@ -25,7 +25,6 @@ fi
 
 # Add Repository
 brew tap thoughtbot/formulae
-brew tap caskroom/fonts
 
 packages=(
 	#zsh
@@ -61,14 +60,10 @@ packages=(
 	direnv
 	glide
 	jq
-	jid
-	graphviz
+	#graphviz
 	autoenv
-	the_silver_searcher
-	pt
 	highlight
 	source-highlight
-	ccat
 	knqyf263/pet/pet
 	s-search
 	translate-shell

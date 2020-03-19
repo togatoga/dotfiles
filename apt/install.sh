@@ -45,6 +45,7 @@ packages=(
 	albert
 	xsel
 	xclip
+	bat
 
 	#perfomace
 	sysstat

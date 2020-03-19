@@ -12,8 +12,6 @@ PKGS=(
 	golang.org/x/tools/cmd/present
 	github.com/ChimeraCoder/gojson/gojson
 	github.com/golang/dep/cmd/dep
-	github.com/togatoga/pe
-	github.com/togatoga/cpm
 	mvdan.cc/sh/cmd/shfmt
 	github.com/davecheney/httpstat
 	github.com/kyoshidajp/ghkw

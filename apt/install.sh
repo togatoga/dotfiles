@@ -46,6 +46,7 @@ packages=(
 	xsel
 	xclip
 	bat
+	ripgrep
 
 	#perfomace
 	sysstat

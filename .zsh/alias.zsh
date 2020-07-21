@@ -22,7 +22,7 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 
-alias cat="batcat"
+alias cat="bat"
 alias ccat="ccat --color=always --bg=dark"
 alias today="date +%Y%m%d"
 

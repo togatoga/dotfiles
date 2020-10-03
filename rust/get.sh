@@ -7,5 +7,5 @@ packages=(
 )
 
 for pkg in ${packages[@]}; do
-	cargo install --force $pkg
+	cargo +nightly install --force $pkg
 done

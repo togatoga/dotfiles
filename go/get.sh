@@ -4,7 +4,7 @@ set -e
 
 PKGS=(
 	# General usage
-	github.com/motemen/ghq
+	github.com/x-motemen/ghq
 
 	# Go cmd
 	golang.org/x/tools/cmd/goimports

@@ -80,5 +80,3 @@
 [user]
 	email = togasakitogatoga@gmail.com
 	name = togatoga
-[url "git@github.com:"]
-    insteadOf = https://github.com/

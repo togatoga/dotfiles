@@ -65,7 +65,6 @@ packages=(
 	highlight
 	source-highlight
 	knqyf263/pet/pet
-	s-search
 	translate-shell
 	aspell
 	git-secrets
@@ -86,18 +85,14 @@ mac_packages=(
 	gcc
 	# tmux
 	reattach-to-user-namespace
-	# Emcas
-	cask
 	# gcc
 	clang-format
 	#utils
-	rmtrash
 	automake
 	terminal-notifier
 	chrome-cli
 	proctools
 	urlview
-	ggrep
 	# cross compile
     FiloSottile/musl-cross/musl-cross
     ripgrep	

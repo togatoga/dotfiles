@@ -77,3 +77,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	escludesfile = ~/.gitignore_local
+[user]
+	email = togasakitogatoga@gmail.com
+	name = togatoga

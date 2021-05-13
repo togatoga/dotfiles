@@ -26,7 +26,7 @@ zplug "jocelynmallon/zshmarks", defer:1
 zplug "Tarrasch/zsh-autoenv"
 
 # Tracks your most used directories, based on 'frecency'.
-zplug "rupa/z", use:"*.sh"
+zplug "agkozak/zsh-z"
 
 # enhanced
 zplug "b4b4r07/enhancd", use:init.sh

@@ -23,6 +23,7 @@ packages=(
 	ibus-mozc
 	vim
 	gnome-tweaks
+	zlib1g
 
 	#zsh
 	zsh

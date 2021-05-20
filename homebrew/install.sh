@@ -38,6 +38,7 @@ packages=(
 	hub
 	tig
 	gist
+	git-lfs
 
 	# gcc
 	cmake

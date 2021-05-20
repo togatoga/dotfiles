@@ -72,6 +72,7 @@ packages=(
 	aria2
 	htop
 	doxygen
+	s-search
 
 	# Languages
 	pyenv

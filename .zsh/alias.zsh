@@ -4,14 +4,7 @@
 alias reload='exec $SHELL -l'
 alias path='echo $PATH | tr -s ":" "\n"'
 
-case "${OSTYPE}" in
-darwin*)
-	alias ls="ls -G"
-	;;
-linux*)
-	alias ls="ls --color -F"
-	;;
-esac
+alias ls="ls --color -F"
 alias ks="ls"
 alias sl="ls"
 alias l="ls"

@@ -38,6 +38,7 @@ packages=(
 	hub
 	tig
 	gist
+	git-lfs
 
 	# gcc
 	cmake
@@ -72,6 +73,7 @@ packages=(
 	aria2
 	htop
 	doxygen
+	s-search
 
 	# Languages
 	pyenv

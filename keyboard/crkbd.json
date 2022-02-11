@@ -101,7 +101,7 @@
       "KC_NO",
       "KC_TRNS",
       "MO(2)",
-      "KC_TRNS"
+      "KC_DEL"
     ],
     [
       "KC_TAB",
@@ -134,9 +134,9 @@
       "KC_ASTR",
       "KC_AMPR",
       "KC_CIRC",
-      "0x80",
-      "0x81",
-      "0x7f",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
       "KC_LBRC",
       "KC_EQL",
       "KC_MS_LEFT",

@@ -58,12 +58,3 @@ keymap:
           C-c: C-q
           # C-x u (undo)
           u: [C-z, { set_mark: false }]
-modmap:
-  - name: Fcitx Switch Japanese Input
-    remap:
-      Alt_L:
-        alone: Muhenkan
-        held: Alt_L
-      Alt_R:
-        alone: Henkan
-        held: Alt_R

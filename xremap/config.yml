@@ -2,7 +2,7 @@
 keymap:
   - name: Emacs
     application:
-      not: [Gnome-terminal]
+      not: [Gnome-terminal, gnome-terminal-server]
     remap:
       # Cursor
       C-b: { with_mark: left }

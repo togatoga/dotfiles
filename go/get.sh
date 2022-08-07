@@ -4,28 +4,9 @@ set -e
 
 PKGS=(
 	# General usage
-	github.com/x-motemen/ghq
-
-	# Go cmd
-	golang.org/x/tools/cmd/goimports
-	golang.org/x/tools/cmd/benchcmp
-	golang.org/x/tools/cmd/present
-	github.com/ChimeraCoder/gojson/gojson
-	mvdan.cc/sh/cmd/shfmt
-	github.com/davecheney/httpstat
-	github.com/kyoshidajp/ghkw
-
-	# Golang dev
-	github.com/nsf/gocode
-	github.com/rogpeppe/godef
-	github.com/dougm/goflymake
-	github.com/jstemmer/gotags
-	github.com/k0kubun/pp
-	github.com/tools/godep
-	github.com/motemen/gore
-	github.com/tcnksm/ghr
+	github.com/x-motemen/ghq@latest
 )
 
 for pkg in ${PKGS[@]}; do
-	go get -u -v $pkg
+	go install $pkg
 done

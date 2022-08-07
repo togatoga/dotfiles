@@ -6,9 +6,6 @@ if test ! $(which brew); then
 	if [ "$(uname)" == 'Darwin' ]; then
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	fi
-	if [ "$(uname)" == 'Linux' ]; then
-		sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-	fi
 fi
 
 # Update homebrew recipes
@@ -23,18 +20,12 @@ if [ "${ANS}" = "Y" ]; then
 	brew upgrade
 fi
 
-# Add Repository
-brew tap thoughtbot/formulae
-
 packages=(
-	#zsh
-	zsh
 
 	# tmux
 	tmux
 
 	# git
-	git
 	hub
 	tig
 	gist
@@ -49,30 +40,18 @@ packages=(
 	# Utils
 	peco
 	fzf
-	autoconf
 	wget
-	curl
 	tree
 	openssl
 	libyaml
-	readline
-	markdown
 	nkf
 	direnv
-	glide
 	jq
 	#graphviz
 	autoenv
 	highlight
-	source-highlight
-	knqyf263/pet/pet
-	translate-shell
-	aspell
-	git-secrets
 	tldr
-	aria2
 	htop
-	doxygen
 	s-search
 
 	# Languages
@@ -96,14 +75,15 @@ mac_packages=(
 	proctools
 	urlview
 	# cross compile
-    FiloSottile/musl-cross/musl-cross
-    ripgrep	
+	FiloSottile/musl-cross/musl-cross
+	ripgrep
 )
 
-echo "installing binaries..."
-brew install ${packages[@]} && brew cleanup
+
+
 
 if [ "$(uname)" == 'Darwin' ]; then
-	echo "installing binaries only for macOS"
+	echo "installing binaries..."
+	brew install ${packages[@]} && brew cleanup
 	brew install ${mac_packages[@]} && brew cleanup
 fi

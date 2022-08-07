@@ -86,4 +86,5 @@ if [ "$(uname)" == 'Darwin' ]; then
 	echo "installing binaries..."
 	brew install ${packages[@]} && brew cleanup
 	brew install ${mac_packages[@]} && brew cleanup
+	brew install --cask alacritty
 fi

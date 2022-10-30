@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function pro() {
-	dir=$(cpm list --all | peco --prompt '[dir]')
+	dir=$(cpm list --all --recent | peco --prompt '[dir]')
 	if [ -n ${dir} ]; then
 		num=$(echo ${dir} | awk '{print NF}')
 		if [ ${num} -eq 1 ]; then

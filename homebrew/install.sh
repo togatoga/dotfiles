@@ -21,10 +21,6 @@ if [ "${ANS}" = "Y" ]; then
 fi
 
 packages=(
-
-	# tmux
-	tmux
-
 	# git
 	hub
 	tig
@@ -32,12 +28,11 @@ packages=(
 	git-lfs
 
 	# gcc
-	cmake
-
-	# go
-	go
+	cmake	
 
 	# Utils
+	tmux
+	bat
 	peco
 	fzf
 	wget
@@ -57,7 +52,7 @@ packages=(
 	# Languages
 	pyenv
 	rbenv
-	ruby-build
+	ruby-build	
 )
 
 mac_packages=(
@@ -68,7 +63,7 @@ mac_packages=(
 	reattach-to-user-namespace
 	# gcc
 	clang-format
-	#utils
+	# utils
 	automake
 	terminal-notifier
 	chrome-cli
@@ -78,9 +73,6 @@ mac_packages=(
 	FiloSottile/musl-cross/musl-cross
 	ripgrep
 )
-
-
-
 
 if [ "$(uname)" == 'Darwin' ]; then
 	echo "installing binaries..."

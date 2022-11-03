@@ -1,0 +1,12 @@
+[Unit]
+Description=xremap
+
+[Service]
+KillMode=process
+ExecStart=/home/togatoga/.cargo/bin/xremap /home/togatoga/dotfiles/xremap/config.yml
+ExecStop=/usr/bin/killall xremap
+Restart=always
+RestartSec=1s
+
+[Install]
+WantedBy=default.target

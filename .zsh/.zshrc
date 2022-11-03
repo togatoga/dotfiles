@@ -33,15 +33,7 @@ if [ "$(uname)" = 'Darwin' ] ; then
 	export MANPATH="/usr/local/share/man:${MANPATH}"
 fi
 
-if [ "$(uname)" = 'Linux' ]; then
-    export PATH='/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin':"$PATH"
-	export PATH="$HOME/.linuxbrew/bin:$PATH"
-	export OPENSSL_LIB_DIR=/usr/lib/x86_64-linux-gnu/
-	export OPENSSL_INCLUDE_DIR=/usr/include/openssl/
-	export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-	export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-	export XDG_DATA_DIRS="$HOME/.linuxbrew/share:$XDG_DATA_DIRS"
-fi
+
 export PATH="${DOTPATH}/bin:$PATH"
 
 typeset -U path PATH
@@ -169,3 +161,7 @@ if [ -f /usr/local/bin/src-hilite-lesspipe.sh ];then
 	export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

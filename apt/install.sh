@@ -13,45 +13,31 @@ if [ "$ANS" = 'Y' ]; then
 fi
 
 packages=(
-	#general
 	build-essential
 	curl
 	ibus-mozc
 	vim
 	gnome-tweaks
 	zlib1g
-
-	#zsh
 	zsh
-
-	# git
 	git
 	tig
-
-	# gcc
 	gcc
 	clang
 	clang-format
-
-	#ruby
 	rubygems
-
-	#sqlite
 	sqlite3
-
-	# Utils
 	albert
 	xsel
 	xclip
 	bat
 	ripgrep
 	fzf
-
-	#perfomace
 	sysstat
 	strace
 	pyenv
 	rbenv
+	htop
 )
 for pkg in ${packages[@]}; do
 	sudo apt-get install -y $pkg

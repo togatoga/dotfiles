@@ -5,6 +5,7 @@ Description=xremap
 KillMode=process
 ExecStart=/home/togatoga/.cargo/bin/xremap /home/togatoga/dotfiles/xremap/config.yml
 ExecStop=/usr/bin/killall xremap
+User=togatoga
 Restart=always
 RestartSec=1s
 

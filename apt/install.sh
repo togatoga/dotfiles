@@ -38,6 +38,7 @@ packages=(
 	pyenv
 	rbenv
 	htop
+	chrome-gnome-shell
 )
 for pkg in ${packages[@]}; do
 	sudo apt-get install -y $pkg

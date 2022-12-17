@@ -3,7 +3,7 @@ Description=xremap
 
 [Service]
 KillMode=process
-ExecStart=/home/togatoga/.cargo/bin/xremap /home/togatoga/dotfiles/xremap/config.yml
+ExecStart=/home/togatoga/.cargo/bin/xremap --watch /home/togatoga/dotfiles/xremap/config.yml
 ExecStop=/usr/bin/killall xremap
 User=togatoga
 Restart=always

@@ -21,8 +21,8 @@ if [ ! -d ~/.config ]; then
 fi
 
 # python
-echo "Set up Python..."
-./python/get.sh
+#echo "Set up Python..."
+#./python/get.sh
 
 # go
 echo "Set up Golang..."

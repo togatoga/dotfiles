@@ -26,6 +26,7 @@ packages=(
 
 	# git
 	git
+	tig
 
 	# gcc
 	gcc
@@ -44,11 +45,13 @@ packages=(
 	xclip
 	bat
 	ripgrep
+	fzf
 
 	#perfomace
 	sysstat
 	strace
-
+	pyenv
+	rbenv
 )
 for pkg in ${packages[@]}; do
 	sudo apt-get install -y $pkg

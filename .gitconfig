@@ -80,7 +80,7 @@
 	excludesfile = ~/.gitignore_global
 	escludesfile = ~/.gitignore_local
 [user]
-	email = togasakitogatoga@gmail.com
+	email = hitoshitogasaki@gmail.com
 	name = togatoga
 [filter "lfs"]
 	required = true

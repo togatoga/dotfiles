@@ -1,13 +1,18 @@
 #!/bin/bash
 
 function pro() {
-	dir=$(cpm list --all --recent | peco --prompt '[dir]')
+	declare options
+	options=''
+	if [ $# -ne 0 ]; then
+		options="$1"
+	fi
+	dir=$(cpm list --all ${options} | peco --prompt '[dir]')
 	if [ -n ${dir} ]; then
 		num=$(echo ${dir} | awk '{print NF}')
 		if [ ${num} -eq 1 ]; then
-		procon_dir=$(echo ${dir} | awk '{print $0}')
+			procon_dir=$(echo ${dir} | awk '{print $0}')
 		else
-		procon_dir=$(echo ${dir} | awk '{print $NF}')
+			procon_dir=$(echo ${dir} | awk '{print $NF}')
 		fi
 		cd $procon_dir
 		return 1

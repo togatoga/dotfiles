@@ -35,6 +35,7 @@ fi
 
 
 export PATH="${DOTPATH}/bin:$PATH"
+source $DOTPATH/.zsh/custom/*.zsh
 
 typeset -U path PATH
 

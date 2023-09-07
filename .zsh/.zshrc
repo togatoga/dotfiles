@@ -27,6 +27,7 @@ source $DOTPATH/.zsh/zplug/zplug.zsh
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
 if [ "$(uname)" = 'Darwin' ] ; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 	export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
     export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 	export MANPATH="/usr/local/opt/coreutilslibexec/gnuman:${MANPATH}"
@@ -35,13 +36,13 @@ fi
 
 
 export PATH="${DOTPATH}/bin:$PATH"
-source $DOTPATH/.zsh/custom/*.zsh
 
 typeset -U path PATH
 
 if type "direnv" > /dev/null 2>&1; then
    eval "$(direnv hook zsh)"
 fi
+
 
 # Read common setting zsh
 for f ($DOTPATH/.*/*.zsh) source "${f}"

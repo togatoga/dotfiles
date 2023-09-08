@@ -27,9 +27,6 @@ packages=(
 	gist
 	git-lfs
 
-	# gcc
-	cmake	
-
 	# Utils
 	tmux
 	bat
@@ -50,9 +47,7 @@ packages=(
 	s-search
 
 	# Languages
-	pyenv
-	rbenv
-	ruby-build	
+	ruby-build
 )
 
 mac_packages=(

@@ -6,8 +6,7 @@ if [ "${ANS}" == "Y" ]; then
 	cp .gitconfig.local ~/
 fi
 
-
-#apt-get,snap
+# apt-get,snap
 if [ "$(uname)" == "Linux" ]; then
 	./apt/install.sh
 fi
@@ -20,15 +19,6 @@ if [ ! -d ~/.config ]; then
 	mkdir ~/.config
 fi
 
-# python
-#echo "Set up Python..."
-#./python/get.sh
-
-# go
-echo "Set up Golang..."
-./go/get.sh
-
-#
 if [ "$(uname)" == "Linux" ]; then
 	echo "Set up peco..."
 	./.peco/install.sh
@@ -43,7 +33,6 @@ if test ! $(which rustc); then
 	echo "Install Rust..."
 	./rust/install.sh
 fi
-./rust/get.sh
 
 # tmux
 echo "Set up Tmux..."

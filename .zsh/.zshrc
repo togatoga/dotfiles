@@ -36,7 +36,7 @@ fi
 
 
 export PATH="${DOTPATH}/bin:$PATH"
-
+source $DOTPATH/.zsh/custom/*.zsh
 typeset -U path PATH
 
 if type "direnv" > /dev/null 2>&1; then

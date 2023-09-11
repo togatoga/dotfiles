@@ -36,28 +36,17 @@ fi
 
 
 export PATH="${DOTPATH}/bin:$PATH"
-source $DOTPATH/.zsh/custom/*.zsh
 typeset -U path PATH
 
 if type "direnv" > /dev/null 2>&1; then
    eval "$(direnv hook zsh)"
 fi
 
-
 # Read common setting zsh
 for f ($DOTPATH/.*/*.zsh) source "${f}"
 for f ($DOTPATH/.zsh/helper/*.zsh) source "${f}"
 for f ($DOTPATH/bin/*.zsh) source "${f}"
-
-# Read private setting zsh
-if [ -e ~/private ];then
-	for f (~/private/.*/*.zsh) source "${f}"
-fi
-
-# Read company setting zsh
-if [ -e ~/company ];then
-	for f (~/company/utils/*.zsh) source "${f}"
-fi
+for f ($DOTPATH/.zsh/custom/*.zsh) source "${f}"
 
 
 # use color

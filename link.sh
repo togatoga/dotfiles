@@ -17,8 +17,8 @@ fi
 ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/dotfiles/.gitconfig_local ~/.gitconfig_local
 ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
-ln -sf ~/dotfiles/.gitignore_local ~/.gitignore_local
 
 mkdir -p ~/.config/peco/
 ln -sf ~/dotfiles/.peco/config.json ~/.config/peco/config.json

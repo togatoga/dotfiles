@@ -11,8 +11,7 @@
   lineNumber = true
 
 [alias]
-  s   = status
-  st  = status
+  s   = status  
   ss  = status -s
   sh  = show
   so  = remote show origin
@@ -46,15 +45,11 @@
   d2  = diff HEAD~~
   d3  = diff HEAD~~~
   d4  = diff HEAD~~~~
-  d5  = diff HEAD~~~~~
+  d5  = diff HEAD~~~~~  
   root = !git rev-parse --show-toplevel
-
   l   = log --graph -n 20 --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(green)- %an, %cr%Creset'
   ll  = log --stat --abbrev-commit
   l1  = log --stat --abbrev-commit -n 1
-
-  gr  = grep
-  gn  = grep -n
 
   alias  = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ => \\2/' | sort
   ignore = "!f() { echo $1 >> \"${GIT_PREFIX}.gitignore\";  }; f"
@@ -62,16 +57,7 @@
   set-upstream = "!git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)"
   delete-merged-branches = "!git branch --merged | egrep -v '(^\\*|master|main|dev)' | xargs -n 1 git branch -d"
 [ghq]
-  root = ~/.go/src
   root = ~/src
-[diff]
-  tool = meld
-[difftool "meld"]
-  cmd = meld $LOCAL $REMOTE
-[merge]
-  tool = meld
-[mergetool "meld"]
-    cmd = meld "$LOCAL" "$MERGED" "$REMOTE"
 [push]
 	default = current
 [url "git@github.com:"]
@@ -81,7 +67,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	escludesfile = ~/.gitignore_local
-
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f

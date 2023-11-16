@@ -58,7 +58,9 @@
 
   alias  = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ => \\2/' | sort
   ignore = "!f() { echo $1 >> \"${GIT_PREFIX}.gitignore\";  }; f"
-	push-fwl = push --force-with-lease
+  push-fwl = push --force-with-lease
+  set-upstream = "!git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)"
+  delete-merged-branches = "!git branch --merged | egrep -v '(^\\*|master|main|dev)' | xargs -n 1 git branch -d"
 [ghq]
   root = ~/.go/src
   root = ~/src

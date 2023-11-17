@@ -60,6 +60,7 @@
   root = ~/src
 [push]
 	default = current
+	autoSetupRemote = true
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [url "https://github.com/rust-lang/crates.io-index"]

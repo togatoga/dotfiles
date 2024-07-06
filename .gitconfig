@@ -75,3 +75,6 @@
 	process = git-lfs filter-process
 [pull]
 	rebase = false
+[user]
+	name = togatoga
+	email = hitoshitogasaki@gmail.com

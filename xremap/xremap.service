@@ -1,13 +1,12 @@
 [Unit]
-Description=xremap
+Description=xremap gnome
 
 [Service]
 KillMode=process
 ExecStart=/home/togatoga/.cargo/bin/xremap --watch /home/togatoga/dotfiles/xremap/config.yml
-ExecStop=/usr/bin/killall xremap
-User=togatoga
+Type=simple
 Restart=always
-RestartSec=1s
+Environment=DISPLAY=:0
 
 [Install]
 WantedBy=default.target

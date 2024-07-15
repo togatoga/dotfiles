@@ -20,9 +20,11 @@ TogglePreedit=
 
 [Hotkey/ActivateKeys]
 0=Super+Super_R
+1=Alt+Alt_R
 
 [Hotkey/DeactivateKeys]
 0=Super+Super_L
+1=Alt+Alt_R
 
 [Hotkey/PrevPage]
 0=Up

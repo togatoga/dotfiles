@@ -22,5 +22,5 @@ peco-chrome-history() {
 		peco --prompt "[url]" | sed 's#.*\(https*://\)#\1#' | xargs $open >/dev/null 2>/dev/null
 
 }
-zle -N peco-chrome-history
-bindkey '^[' peco-chrome-history
+#zle -N peco-chrome-history
+#bindkey '^[' peco-chrome-history

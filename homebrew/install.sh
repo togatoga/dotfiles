@@ -26,6 +26,7 @@ packages=(
 	tig
 	gist
 	git-lfs
+	gh
 
 	# Utils
 	tmux

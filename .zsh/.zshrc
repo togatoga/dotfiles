@@ -61,7 +61,7 @@ SAVEHIST=1000000
 setopt hist_ignore_dups
 
 # prompt
-PROMPT="%{${fg[green]}%}[%n]%{${reset_color}%} %~
+PROMPT="%{${fg[blue]}%}[%n]%{${reset_color}%} %~
 %# "
 
 ########################################
@@ -70,10 +70,11 @@ PROMPT="%{${fg[green]}%}[%n]%{${reset_color}%} %~
 autoload -Uz vcs_info
 setopt prompt_subst
 zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git*:*' get-revision true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
-zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b|%F{cyan}%8.8i%f]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a|%F{cyan}%8.8i%f]'
 precmd () { vcs_info }
 #RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 PROMPT='${vcs_info_msg_0_}'$PROMPT
@@ -156,3 +157,6 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2025-06-19 00:21:04
+export PATH="$PATH:/Users/hitoshitogasaki/.local/bin"

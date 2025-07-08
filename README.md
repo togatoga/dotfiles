@@ -30,6 +30,12 @@ cd dotfiles
 ## Info
 
 ```bash
+# github setting
+gh auth login ssh
+gh config set -h github.com git_protocol ssh
+# check git status
+gh auth status
+ssh -T git@github.com
 # zplug
 $ zplug install
 ```

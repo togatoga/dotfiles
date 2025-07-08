@@ -8,7 +8,7 @@ function urlencode() {
 		return
 	fi
 
-	python -c "import urllib.parse as u; print(u.quote('$url'));"
+	python3 -c "import urllib.parse as u; print(u.quote('$url'));"
 }
 
 # Decode a string that may have been URL encoded
@@ -21,5 +21,5 @@ function urldecode() {
 		return
 	fi
 
-	python -c "import urllib.parse as u; print(u.unquote('$string'));"
+	python3 -c "import urllib.parse as u; print(u.unquote('$string'));"
 }

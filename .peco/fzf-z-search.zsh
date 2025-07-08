@@ -4,9 +4,9 @@ function fzf-z-search() {
 		echo "Please install peco and z"
 		return 1
 	fi
-	local res=$(z | sort -rn | cut -c 11- | fzf --ansi --exact --query "$LBUFFER")
+	local res=$(z | sort -rn | cut -c 11- | fzf --ansi --exact --query "$LBUFFER" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
 	if [ -n "$res" ]; then
-		BUFFER="cd $res"
+		BUFFER="cd \"$res\""
 		zle accept-line
 	else
 		return 1

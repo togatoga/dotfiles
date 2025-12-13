@@ -160,3 +160,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Created by `pipx` on 2025-06-19 00:21:04
 export PATH="$PATH:/Users/hitoshitogasaki/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"

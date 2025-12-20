@@ -4,16 +4,7 @@ set -e
 
 #link to dotfiles
 ln -sf ~/dotfiles/.zsh/.zshrc ~/.zshrc
-#tmux
-echo $IS_LINUX
-if [ "$(uname)" = 'Linux' ]; then
-	ln -sf ~/dotfiles/.tmux/.ubuntu_tmux.conf ~/.tmux.conf
-elif [ "$(uname)" = 'Darwin' ]; then
-	ln -sf ~/dotfiles/.tmux/.mac_tmux.conf ~/.tmux.conf
-else
-	exit 0
-fi
-
+ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.vim/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.tigrc ~/.tigrc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig

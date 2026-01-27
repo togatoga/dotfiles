@@ -19,11 +19,6 @@ if [ ! -d ~/.config ]; then
 	mkdir ~/.config
 fi
 
-if [ "$(uname)" == "Linux" ]; then
-	echo "Set up peco..."
-	./.peco/install.sh
-fi
-
 echo "Set up Docker..."
 ./docker/init.sh
 

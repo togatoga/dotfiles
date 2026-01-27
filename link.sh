@@ -10,6 +10,3 @@ ln -sf ~/dotfiles/.tigrc ~/.tigrc
 ln -sf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/.gitconfig_local ~/.gitconfig_local
 ln -sf ~/dotfiles/.gitignore_global ~/.gitignore_global
-
-mkdir -p ~/.config/peco/
-ln -sf ~/dotfiles/.peco/config.json ~/.config/peco/config.json

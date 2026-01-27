@@ -1,7 +1,7 @@
 function fzf-z-search() {
 	which fzf z >/dev/null
 	if [ $? -ne 0 ]; then
-		echo "Please install peco and z"
+		echo "Please install fzf and z"
 		return 1
 	fi
 	local res=$(z | sort -rn | cut -c 11- | fzf --ansi --exact --query "$LBUFFER" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')

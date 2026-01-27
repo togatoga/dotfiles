@@ -1,4 +1,4 @@
-function peco-chrome-close-tab() {
+function fzf-chrome-close-tab() {
     which chrome-cli > /dev/null
     if [ $? -ne 0 ];then
         echo "Please install chrome-cli"
@@ -15,7 +15,7 @@ function peco-chrome-close-tab() {
         item=${item}${tabs[$i]}' '${links[$i]}'\n'
     done
     
-    local item=($(echo ${item} | peco --prompt "[close]" --query "${LBUFFER}"))
+    local item=($(echo ${item} | fzf --prompt "[close]" --query "${LBUFFER}"))
     
 	for id in $item;
     do
@@ -32,5 +32,5 @@ function peco-chrome-close-tab() {
         fi
 	done
 }
-zle -N peco-chrome-close-tab
-bindkey '^x^w' peco-chrome-close-tab
+zle -N fzf-chrome-close-tab
+#bindkey '^x^w' fzf-chrome-close-tab

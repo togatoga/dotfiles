@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # vim: set filetype=ruby:
-# chrome-bookmark - browse Chrome bookmarks with peco
+# chrome-bookmark - browse Chrome bookmarks with fzf
 
 open="open"
 if [ "$(uname)" = 'Linux' ]; then
@@ -8,7 +8,7 @@ if [ "$(uname)" = 'Linux' ]; then
 fi
 
 /usr/bin/ruby -x "$0"                                          |
-  peco --prompt "[url]" |
+  fzf --prompt "[url]" |
   awk 'BEGIN { FS = "\t" } { print $2 }'                       |
   xargs $open
 exit $?

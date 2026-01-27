@@ -6,7 +6,7 @@ function pro() {
 	if [ $# -ne 0 ]; then
 		options="$1"
 	fi
-	dir=$(cpm list --all ${options} | peco --prompt '[dir]')
+	dir=$(cpm list --all ${options} | fzf --prompt '[dir]')
 	if [ -n ${dir} ]; then
 		num=$(echo ${dir} | awk '{print NF}')
 		if [ ${num} -eq 1 ]; then

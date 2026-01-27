@@ -1,5 +1,5 @@
-# peco-chrome-history - browse chrome history
-peco-chrome-history() {
+# fzf-chrome-history - browse chrome history
+fzf-chrome-history() {
 	local cols sep google_history open
 	cols=$((COLUMNS / 3))
 	sep='{::}'
@@ -19,8 +19,8 @@ peco-chrome-history() {
 		"select substr(title, 1, $cols), url
      from urls order by last_visit_time desc" |
 		awk -F $sep '{printf "%-'$cols's  %s\n", $1, $2}' |
-		peco --prompt "[url]" | sed 's#.*\(https*://\)#\1#' | xargs $open >/dev/null 2>/dev/null
+		fzf --prompt "[url]" | sed 's#.*\(https*://\)#\1#' | xargs $open >/dev/null 2>/dev/null
 
 }
-zle -N peco-chrome-history
-bindkey '^[' peco-chrome-history
+zle -N fzf-chrome-history
+#bindkey '^[' fzf-chrome-history

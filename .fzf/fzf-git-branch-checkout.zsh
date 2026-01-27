@@ -1,5 +1,5 @@
-function peco-git-branch-checkout() {
-	local selected_branch_name="$(git branch -a | peco | tr -d ' ')"
+function fzf-git-branch-checkout() {
+	local selected_branch_name="$(git branch -a | fzf | tr -d ' ')"
 	case "$selected_branch_name" in
 	*-\>*)
 		selected_branch_name="$(echo ${selected_branch_name} | perl -ne 's/^.*->(.*?)\/(.*)$/\2/;print')"
@@ -14,5 +14,5 @@ function peco-git-branch-checkout() {
 	fi
 	zle clear-screen
 }
-zle -N peco-git-branch-checkout
-bindkey '^x^b' peco-git-branch-checkout
+zle -N fzf-git-branch-checkout
+bindkey '^x^b' fzf-git-branch-checkout

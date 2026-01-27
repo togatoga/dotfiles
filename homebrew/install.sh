@@ -31,7 +31,6 @@ packages=(
 	# Utils
 	tmux
 	bat
-	peco
 	fzf
 	wget
 	tree

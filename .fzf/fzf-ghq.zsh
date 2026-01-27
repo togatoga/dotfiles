@@ -1,4 +1,4 @@
-# Change directory to the repo where fetched by peco
+# Change directory to the repo where fetched by fzf
 function fzf-ghq() {
 	local selected_dir=$(ghq list --full-path | fzf --exact --query "$LBUFFER")
 	if [ -n "$selected_dir" ]; then

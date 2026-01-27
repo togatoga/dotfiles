@@ -26,9 +26,9 @@ keymap:
       M-Shift-comma: { with_mark: C-home }
       M-Shift-dot: { with_mark: C-end }
       # Newline
-      C-m: enter
-      C-j: enter
-      C-o: [enter, left]
+      #C-m: enter
+      #C-j: enter
+      #C-o: [enter, left]
       # Copy
       C-w: [C-x, { set_mark: false }]
       M-w: [C-c, { set_mark: false }]

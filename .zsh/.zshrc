@@ -45,6 +45,7 @@ fi
 # Read common setting zsh
 for f ($DOTPATH/.*/*.zsh) source "${f}"
 for f ($DOTPATH/.zsh/helper/*.zsh) source "${f}"
+for f ($DOTPATH/fzf/*.zsh) source "${f}"
 for f ($DOTPATH/bin/*.zsh) source "${f}"
 for f ($DOTPATH/.zsh/custom/*.zsh) source "${f}"
 

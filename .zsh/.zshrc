@@ -21,8 +21,8 @@ export EDITOR="vim"
 # PATH
 ########################################
 export DOTPATH=~/dotfiles
-# Load zplug
-source $DOTPATH/.zsh/zplug/zplug.zsh
+# Load zinit
+source $DOTPATH/.zsh/zinit/zinit.zsh
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
@@ -153,11 +153,7 @@ if [ -f /usr/local/bin/src-hilite-lesspipe.sh ];then
 	export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# NVM lazy loading is configured in .zsh/helper/nvm-lazy.zsh
 
 # Created by `pipx` on 2025-06-19 00:21:04
-export PATH="$PATH:/Users/hitoshitogasaki/.local/bin"
 export PATH="$HOME/.local/bin:$PATH"

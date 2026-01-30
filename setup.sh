@@ -1,13 +1,27 @@
 #!/bin/bash
 
+set -e  # Exit on error
+set -u  # Exit on undefined variable
+
 #.gitconfig.local
-printf "Do you install .gitconfig.local in this pc?" && read ANS
-if [ "${ANS}" == "Y" ]; then
-	cp .gitconfig.local ~/
-fi
+printf "Install .gitconfig.local? (Y/n): " && read ANS
+case "${ANS}" in
+    [Yy]* | "")
+        if [ -f ~/.gitconfig.local ]; then
+            echo "✓ .gitconfig.local already exists, skipping"
+        else
+            cp .gitconfig.local ~/
+            echo "✓ .gitconfig.local installed"
+        fi
+        ;;
+    *)
+        echo "Skipping .gitconfig.local"
+        ;;
+esac
 
 # apt-get,snap
-if [ "$(uname)" == "Linux" ]; then
+if [ "$(uname)" = "Linux" ]; then
+	echo "Installing Linux packages..."
 	./apt/install.sh
 fi
 
@@ -17,26 +31,33 @@ fi
 # Create ~/.config
 if [ ! -d ~/.config ]; then
 	mkdir ~/.config
+	echo "✓ Created ~/.config"
+else
+	echo "✓ ~/.config already exists"
 fi
 
 echo "Set up Docker..."
 ./docker/init.sh
 
 # rust
-echo "Set up Rust...."
-if test ! $(which rustc); then
-	echo "Install Rust..."
-	./rust/install.sh
+if ! command -v rustc &> /dev/null; then
+    echo "Installing Rust..."
+    ./rust/install.sh
+    echo "✓ Rust installed"
+else
+    echo "✓ Rust already installed ($(rustc --version))"
 fi
 
 # tmux
-echo "Set up Tmux..."
-./.tmux/init.sh
-
-# zplug
-echo "Set up zplug..."
-if [ ! -d ~/.zplug ]; then
-	curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    echo "Installing Tmux Plugin Manager..."
+    ./.tmux/init.sh
+    echo "✓ Tmux Plugin Manager installed"
+else
+    echo "✓ Tmux Plugin Manager already installed"
 fi
+
+# zinit will be auto-installed on first zsh startup
+echo "Note: zinit will be auto-installed on first zsh startup"
 
 ./link.sh

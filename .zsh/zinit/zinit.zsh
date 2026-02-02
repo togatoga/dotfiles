@@ -10,28 +10,29 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 # Load plugins
 
-# syntax highlighting and colors
+# colors
 zinit ice wait'0a' lucid
 zinit light chrissicool/zsh-256color
 
 zinit ice wait'0a' lucid
 zinit light Tarrasch/zsh-colors
 
-zinit ice wait'0a' lucid
-zinit light zsh-users/zsh-syntax-highlighting
-
-zinit ice wait'0b' lucid
-zinit light ascii-soup/zsh-url-highlighter
-
 # completions
 zinit ice wait'0a' lucid blockf
 zinit light zsh-users/zsh-completions
 
-# autosuggestions
+# autosuggestions (must load before syntax-highlighting)
 zinit ice wait'0a' lucid atload'_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
 bindkey '^ ' autosuggest-accept
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+# syntax highlighting (must be loaded LAST)
+zinit ice wait'1' lucid
+zinit light zsh-users/zsh-syntax-highlighting
+
+zinit ice wait'1' lucid
+zinit light ascii-soup/zsh-url-highlighter
 
 # bookmark
 zinit ice wait'0' lucid

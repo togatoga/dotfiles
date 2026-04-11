@@ -6,7 +6,7 @@ modmap:
 keymap:
   - name: Emacs
     application:
-      not: [Gnome-terminal, gnome-terminal-server, mozc_tool]
+      not: [Gnome-terminal, org.gnome.Ptyxis, GNOME, gnome-terminal-server, mozc_tool]
     remap:
       # Cursor
       C-b: { with_mark: left }

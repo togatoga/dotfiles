@@ -154,7 +154,10 @@ if [ -f /usr/local/bin/src-hilite-lesspipe.sh ];then
 	export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 fi
 
-# NVM lazy loading is configured in .zsh/helper/nvm-lazy.zsh
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Created by `pipx` on 2025-06-19 00:21:04
 export PATH="$HOME/.local/bin:$PATH"

@@ -43,11 +43,11 @@ if type "direnv" > /dev/null 2>&1; then
 fi
 
 # Read common setting zsh
-for f ($DOTPATH/.*/*.zsh) source "${f}"
-for f ($DOTPATH/.zsh/helper/*.zsh) source "${f}"
-for f ($DOTPATH/fzf/*.zsh) source "${f}"
-for f ($DOTPATH/bin/*.zsh) source "${f}"
-for f ($DOTPATH/.zsh/custom/*.zsh) source "${f}"
+for f ($DOTPATH/.*/*.zsh(N)) source "${f}"
+for f ($DOTPATH/.zsh/helper/*.zsh(N)) source "${f}"
+for f ($DOTPATH/fzf/*.zsh(N)) source "${f}"
+for f ($DOTPATH/bin/*.zsh(N)) source "${f}"
+for f ($DOTPATH/.zsh/custom/*.zsh(N)) source "${f}"
 
 
 # use color

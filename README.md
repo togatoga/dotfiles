@@ -50,14 +50,16 @@ The setup script will:
 dotfiles/
 ├── .zsh/              # Zsh configurations
 │   ├── zinit/         # Zinit plugin manager (auto-installed)
-│   ├── custom/        # Custom shell scripts
-│   └── helper/        # Helper functions (including nvm-lazy.zsh)
+│   ├── custom/        # Optional personal overrides (loaded last, git-ignored)
+│   └── helper/        # Helper functions
 ├── fzf/               # FZF integration scripts
+├── bin/               # Standalone scripts on PATH
+├── lib/               # Shared shell helpers (common.sh) for setup/install
 ├── .alacritty/        # Alacritty terminal config
 ├── .tmux/             # Tmux configurations
-├── homebrew/          # Homebrew installation scripts
+├── apt/               # apt package installation (Linux)
+├── homebrew/          # Homebrew installation scripts (macOS)
 ├── keyboard/          # QMK/VIA keyboard layouts
-├── archived/          # Archived/unused configurations
 └── README.md          # This file
 ```
 

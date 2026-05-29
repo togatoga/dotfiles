@@ -20,14 +20,10 @@ require 'json'
 require 'rbconfig'
 
 host_os = RbConfig::CONFIG['host_os']
-file=""
-if host_os == "linux-gnu"
+if host_os =~ /linux/
   file = '~/.config/google-chrome/Default/Bookmarks'
-  if !File.exists?(file)
-    file = '~/.config/google-chrome/Default/Bookmarks'
-  end
 else
-	file = '~/Library/Application Support/Google/Chrome/Default/Bookmarks'
+  file = '~/Library/Application Support/Google/Chrome/Default/Bookmarks'
 end
 
 CJK  = /\p{Han}|\p{Katakana}|\p{Hiragana}|\p{Hangul}/
@@ -55,7 +51,7 @@ def trim str, width
 end
 
 width = `tput cols`.strip.to_i / 2
-json  = JSON.load File.read File.expand_path file
+json  = JSON.parse File.read File.expand_path file
 items = json['roots']
         .values_at(*%w(bookmark_bar synced other))
         .compact

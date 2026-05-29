@@ -26,12 +26,12 @@ source $DOTPATH/.zsh/zinit/zinit.zsh
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
-if [ "$(uname)" = 'Darwin' ] ; then
+if (( ${IS_MAC:-0} )); then
     eval "$(/opt/homebrew/bin/brew shellenv)"
-	export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+    export PATH="/usr/local/bin:/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
     export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-	export MANPATH="/usr/local/opt/coreutilslibexec/gnuman:${MANPATH}"
-	export MANPATH="/usr/local/share/man:${MANPATH}"
+    export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+    export MANPATH="/usr/local/share/man:${MANPATH}"
 fi
 
 
@@ -42,12 +42,16 @@ if type "direnv" > /dev/null 2>&1; then
    eval "$(direnv hook zsh)"
 fi
 
-# Read common setting zsh
-for f ($DOTPATH/.*/*.zsh(N)) source "${f}"
-for f ($DOTPATH/.zsh/helper/*.zsh(N)) source "${f}"
-for f ($DOTPATH/fzf/*.zsh(N)) source "${f}"
-for f ($DOTPATH/bin/*.zsh(N)) source "${f}"
-for f ($DOTPATH/.zsh/custom/*.zsh(N)) source "${f}"
+# Read common setting zsh.
+#   - (N) (NULL_GLOB): tolerate missing/empty dirs without "no matches found".
+#   - custom/ is loaded last so personal overrides win.
+for f (
+    $DOTPATH/.zsh/*.zsh(N)
+    $DOTPATH/.zsh/helper/*.zsh(N)
+    $DOTPATH/fzf/*.zsh(N)
+    $DOTPATH/bin/*.zsh(N)
+    $DOTPATH/.zsh/custom/*.zsh(N)
+) source "$f"
 
 
 # use color
@@ -91,7 +95,7 @@ zstyle ':zle:*' word-style unspecified
 ########################################
 # Completion
 ########################################
-source ~/dotfiles/.zsh/completion.zsh
+# completion.zsh is sourced by the loop above (.zsh/*.zsh).
 
 ########################################
 # Option
@@ -137,7 +141,6 @@ setopt extended_glob
 ########################################
 
 # cdr
-autoload -Uz add-zsh-hock
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 zstyle ':chpwd:*' recent-dirs-max 5000
 zstyle ':chpwd:*' recent-dirs-default yes

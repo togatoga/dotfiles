@@ -67,7 +67,6 @@
   insteadOf = https://github.com/rust-lang/crates.io-index
 [core]
 	excludesfile = ~/.gitignore_global
-	escludesfile = ~/.gitignore_local
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f

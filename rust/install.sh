@@ -1,4 +1,6 @@
 #!/bin/bash
 
-curl https://sh.rustup.rs -sSf | sh
-source $HOME/.cargo/env
+set -euo pipefail
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source "$HOME/.cargo/env"

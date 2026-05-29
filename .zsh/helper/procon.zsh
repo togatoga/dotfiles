@@ -1,21 +1,22 @@
-#!/bin/bash
+#!/bin/zsh
 
 function pro() {
-	declare options
-	options=''
+	local options=""
 	if [ $# -ne 0 ]; then
 		options="$1"
 	fi
+	local dir
 	dir=$(cpm list --all ${options} | fzf --prompt '[dir]')
-	if [ -n ${dir} ]; then
-		num=$(echo ${dir} | awk '{print NF}')
-		if [ ${num} -eq 1 ]; then
-			procon_dir=$(echo ${dir} | awk '{print $0}')
-		else
-			procon_dir=$(echo ${dir} | awk '{print $NF}')
-		fi
-		cd $procon_dir
+	if [ -z "${dir}" ]; then
 		return 1
 	fi
-	return 0
+
+	local num procon_dir
+	num=$(echo "${dir}" | awk '{print NF}')
+	if [ "${num}" -eq 1 ]; then
+		procon_dir=$(echo "${dir}" | awk '{print $0}')
+	else
+		procon_dir=$(echo "${dir}" | awk '{print $NF}')
+	fi
+	cd "$procon_dir"
 }

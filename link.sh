@@ -1,42 +1,44 @@
 #!/bin/bash
 
-set -e
+set -euo pipefail
 
-# Helper function
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/common.sh"
+
+# Symlink $1 -> $2, refusing to clobber a real (non-symlink) file.
 link_file() {
     local src="$1"
     local dest="$2"
 
     if [ -e "$dest" ] && [ ! -L "$dest" ]; then
-        echo "⚠ $dest exists and is not a symlink. Skipping."
-        return 1
+        warn "$dest exists and is not a symlink. Skipping."
+        return 0
     fi
 
     ln -sf "$src" "$dest"
-    echo "✓ $dest -> $src"
+    ok "$dest -> $src"
 }
 
-echo "Creating symlinks..."
+info "Creating symlinks..."
 
-# Link dotfiles
-link_file ~/dotfiles/.zsh/.zshrc ~/.zshrc
-link_file ~/dotfiles/.tmux.conf ~/.tmux.conf
-link_file ~/dotfiles/.vim/.vimrc ~/.vimrc
-link_file ~/dotfiles/.tigrc ~/.tigrc
-link_file ~/dotfiles/.gitconfig ~/.gitconfig
-link_file ~/dotfiles/.gitconfig.local ~/.gitconfig.local
-link_file ~/dotfiles/.gitignore_global ~/.gitignore_global
+# Home-directory dotfiles
+link_file "$DOTFILES_ROOT/.zsh/.zshrc"        ~/.zshrc
+link_file "$DOTFILES_ROOT/.tmux.conf"         ~/.tmux.conf
+link_file "$DOTFILES_ROOT/.vim/.vimrc"        ~/.vimrc
+link_file "$DOTFILES_ROOT/.tigrc"             ~/.tigrc
+link_file "$DOTFILES_ROOT/.gitconfig"         ~/.gitconfig
+link_file "$DOTFILES_ROOT/.gitconfig.local"   ~/.gitconfig.local
+link_file "$DOTFILES_ROOT/.gitignore_global"  ~/.gitignore_global
 
-# .config directory links
+# ~/.config links
 mkdir -p ~/.config
 
 # Alacritty (macOS + Linux)
-link_file ~/dotfiles/.alacritty ~/.config/alacritty
+link_file "$DOTFILES_ROOT/.alacritty" ~/.config/alacritty
 
 # Linux-specific
-if [ "$(uname)" = 'Linux' ]; then
-    link_file ~/dotfiles/xremap ~/.config/xremap
-    link_file ~/dotfiles/fcitx5 ~/.config/fcitx5
+if is_linux; then
+    link_file "$DOTFILES_ROOT/xremap" ~/.config/xremap
+    link_file "$DOTFILES_ROOT/fcitx5" ~/.config/fcitx5
 fi
 
-echo "✓ All symlinks created successfully"
+ok "All symlinks created successfully"

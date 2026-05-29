@@ -1,63 +1,61 @@
 #!/bin/bash
 
-set -e  # Exit on error
-set -u  # Exit on undefined variable
+set -euo pipefail
 
-#.gitconfig.local
-printf "Install .gitconfig.local? (Y/n): " && read ANS
-case "${ANS}" in
-    [Yy]* | "")
-        if [ -f ~/.gitconfig.local ]; then
-            echo "✓ .gitconfig.local already exists, skipping"
-        else
-            cp .gitconfig.local ~/
-            echo "✓ .gitconfig.local installed"
-        fi
-        ;;
-    *)
-        echo "Skipping .gitconfig.local"
-        ;;
-esac
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib/common.sh"
 
-# apt-get,snap
-if [ "$(uname)" = "Linux" ]; then
-	echo "Installing Linux packages..."
-	./apt/install.sh
+# .gitconfig.local
+if confirm "Install .gitconfig.local?"; then
+    if [ -f ~/.gitconfig.local ]; then
+        ok ".gitconfig.local already exists, skipping"
+    else
+        cp "$DOTFILES_ROOT/.gitconfig.local" ~/
+        ok ".gitconfig.local installed"
+    fi
+else
+    info "Skipping .gitconfig.local"
 fi
 
-# homebrew
-./homebrew/install.sh
+# OS-specific packages
+if is_linux; then
+    info "Installing Linux packages..."
+    "$DOTFILES_ROOT/apt/install.sh"
+elif is_mac; then
+    info "Installing Homebrew packages..."
+    "$DOTFILES_ROOT/homebrew/install.sh"
+fi
 
 # Create ~/.config
 if [ ! -d ~/.config ]; then
-	mkdir ~/.config
-	echo "✓ Created ~/.config"
+    mkdir ~/.config
+    ok "Created ~/.config"
 else
-	echo "✓ ~/.config already exists"
+    ok "~/.config already exists"
 fi
 
-echo "Set up Docker..."
-./docker/init.sh
+# Docker (Linux only; the script no-ops elsewhere)
+info "Setting up Docker..."
+"$DOTFILES_ROOT/docker/init.sh"
 
-# rust
+# Rust
 if ! command -v rustc &> /dev/null; then
-    echo "Installing Rust..."
-    ./rust/install.sh
-    echo "✓ Rust installed"
+    info "Installing Rust..."
+    "$DOTFILES_ROOT/rust/install.sh"
+    ok "Rust installed"
 else
-    echo "✓ Rust already installed ($(rustc --version))"
+    ok "Rust already installed ($(rustc --version))"
 fi
 
 # tmux
 if [ ! -d ~/.tmux/plugins/tpm ]; then
-    echo "Installing Tmux Plugin Manager..."
-    ./.tmux/init.sh
-    echo "✓ Tmux Plugin Manager installed"
+    info "Installing Tmux Plugin Manager..."
+    "$DOTFILES_ROOT/.tmux/init.sh"
+    ok "Tmux Plugin Manager installed"
 else
-    echo "✓ Tmux Plugin Manager already installed"
+    ok "Tmux Plugin Manager already installed"
 fi
 
-# zinit will be auto-installed on first zsh startup
-echo "Note: zinit will be auto-installed on first zsh startup"
+# zinit is auto-installed on first zsh startup (see .zsh/zinit/zinit.zsh)
+info "zinit will be auto-installed on first zsh startup"
 
-./link.sh
+"$DOTFILES_ROOT/link.sh"

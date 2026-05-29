@@ -1,77 +1,77 @@
 #!/bin/bash
 
-# Check for Homebrew, install if we don't have it
-if test ! $(which brew); then
-	echo "Installing homebrew..."
-	if [ "$(uname)" == 'Darwin' ]; then
-		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	fi
+set -euo pipefail
+
+source "$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/lib/common.sh"
+
+if ! is_mac; then
+    exit 0
 fi
 
-# Update homebrew recipes
-printf "Update recipes? [Y/n]: " && read ANS
-if [ "${ANS}" = "Y" ]; then
-	brew update
+# Install Homebrew if missing.
+if ! command -v brew &> /dev/null; then
+    info "Installing homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-# Upgrade all
-printf "Upgrade? [Y/n]: " && read ANS
-if [ "${ANS}" = "Y" ]; then
-	brew upgrade
+if confirm "Update homebrew recipes?" N; then
+    brew update
+fi
+
+if confirm "Upgrade installed packages?" N; then
+    brew upgrade
 fi
 
 packages=(
-	# git
-	hub
-	tig
-	gist
-	git-lfs
-	gh
+    # git
+    hub
+    tig
+    gist
+    git-lfs
+    gh
 
-	# Utils
-	tmux
-	bat
-	fzf
-	wget
-	tree
-	openssl
-	libyaml
-	nkf
-	direnv
-	jq
-	#graphviz
-	autoenv
-	highlight
-	tldr
-	htop
-	s-search
+    # Utils
+    tmux
+    bat
+    fzf
+    wget
+    tree
+    openssl
+    libyaml
+    nkf
+    direnv
+    jq
+    #graphviz
+    autoenv
+    highlight
+    tldr
+    htop
+    s-search
 
-	# Languages
-	ruby-build
+    # Languages
+    ruby-build
 )
 
 mac_packages=(
-	#gnu command
-	coreutils
-	gcc
-	# tmux
-	reattach-to-user-namespace
-	# gcc
-	clang-format
-	# utils
-	automake
-	terminal-notifier
-	chrome-cli
-	proctools
-	urlview
-	# cross compile
-	FiloSottile/musl-cross/musl-cross
-	ripgrep
+    # gnu command
+    coreutils
+    gcc
+    # tmux
+    reattach-to-user-namespace
+    # gcc
+    clang-format
+    # utils
+    automake
+    terminal-notifier
+    chrome-cli
+    proctools
+    urlview
+    # cross compile
+    FiloSottile/musl-cross/musl-cross
+    ripgrep
 )
 
-if [ "$(uname)" == 'Darwin' ]; then
-	echo "installing binaries..."
-	brew install ${packages[@]} && brew cleanup
-	brew install ${mac_packages[@]} && brew cleanup
-	brew install --cask alacritty
-fi
+info "installing binaries..."
+brew install "${packages[@]}" && brew cleanup
+brew install "${mac_packages[@]}" && brew cleanup
+brew install --cask alacritty

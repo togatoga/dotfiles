@@ -1,0 +1,7 @@
+# atuin configuration.
+# Only overrides are listed here; everything else uses atuin's built-in
+# defaults. Full reference: https://docs.atuin.sh/configuration/config/
+
+# Do NOT run a selected history entry immediately. Pressing Enter on a match
+# puts the command on the line for editing; press Enter again to run it.
+enter_accept = false

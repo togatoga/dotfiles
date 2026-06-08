@@ -35,6 +35,10 @@ mkdir -p ~/.config
 # Alacritty (macOS + Linux)
 link_file "$DOTFILES_ROOT/.alacritty" ~/.config/alacritty
 
+# atuin (config only; history DB lives in ~/.local/share/atuin)
+mkdir -p ~/.config/atuin
+link_file "$DOTFILES_ROOT/atuin/config.toml" ~/.config/atuin/config.toml
+
 # Linux-specific
 if is_linux; then
     link_file "$DOTFILES_ROOT/xremap" ~/.config/xremap

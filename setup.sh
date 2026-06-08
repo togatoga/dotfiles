@@ -55,6 +55,10 @@ else
     ok "Tmux Plugin Manager already installed"
 fi
 
+# atuin (shell history)
+info "Setting up atuin..."
+"$DOTFILES_ROOT/atuin/install.sh"
+
 # zinit is auto-installed on first zsh startup (see .zsh/zinit/zinit.zsh)
 info "zinit will be auto-installed on first zsh startup"
 

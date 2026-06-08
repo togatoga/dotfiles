@@ -4,4 +4,6 @@ function fzf-select-history() {
 	zle clear-screen
 }
 zle -N fzf-select-history
-bindkey '^r' fzf-select-history
+# Ctrl-R is now handled by atuin (see .zsh/atuin.zsh). Kept here as a fallback;
+# uncomment to rebind if you ever remove atuin.
+#bindkey '^r' fzf-select-history

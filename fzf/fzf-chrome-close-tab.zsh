@@ -1,35 +1,11 @@
 function fzf-chrome-close-tab() {
-    which chrome-cli > /dev/null
-    if [ $? -ne 0 ];then
-        echo "Please install chrome-cli"
-        return 1
-    fi
-     IFS=$'\n'
-    local links=($(chrome-cli list links | awk '{ print $2 }'))
-    local tabs=$(chrome-cli list tabs)
-    tabs=(${=tabs})
-    links=(${=links})
-    n=${#tabs}
-    item=''
-    for i in `seq 1 ${n}`;do
-        item=${item}${tabs[$i]}' '${links[$i]}'\n'
-    done
-    
-    local item=($(echo ${item} | fzf --prompt "[close]" --query "${LBUFFER}"))
-    
-	for id in $item;
-    do
-        
-        id=$(echo ${id} | grep -oE '\[[0-9:]*\]' | tr -d '\[\]')
-        id=(${(s/:/)id})
-        size=${#id[@]}
-        if [ ${size} = '1' ];then
-            local tab_id=${id[1]}
-            chrome-cli close -t ${tab_id}
-        elif [ ${size} = '2' ];then
-            local tab_id=${id[2]}
-            chrome-cli close -t ${tab_id}
-        fi
+	__fzf_require chrome-cli || return 1
+	local IFS=$'\n'
+	local selected=($(__fzf_chrome_tabs | fzf --prompt "[close]" --query "${LBUFFER}"))
+	local line tab_id
+	for line in $selected; do
+		tab_id=$(__fzf_chrome_tab_id "$line")
+		[ -n "$tab_id" ] && chrome-cli close -t ${tab_id}
 	done
 }
 zle -N fzf-chrome-close-tab

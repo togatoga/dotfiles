@@ -1,17 +1,12 @@
 function fzf-z-search() {
-	which fzf z >/dev/null
-	if [ $? -ne 0 ]; then
-		echo "Please install fzf and z"
-		return 1
-	fi
+	__fzf_require fzf || return 1
+	__fzf_require z || return 1
 	local res=$(z | sort -rn | cut -c 11- | fzf --ansi --exact --query "$LBUFFER" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
 	if [ -n "$res" ]; then
-		BUFFER="cd \"$res\""
-		zle accept-line
+		__fzf_accept "cd \"$res\""
 	else
 		return 1
 	fi
-	zle clear-screen
 }
 zle -N fzf-z-search
 bindkey '^o' fzf-z-search

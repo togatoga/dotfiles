@@ -9,10 +9,10 @@ function fzf-git-branch-checkout() {
 		;;
 	esac
 	if [ -n "$selected_branch_name" ]; then
-		BUFFER="git checkout ${selected_branch_name}"
-		zle accept-line
+		__fzf_accept "git checkout ${selected_branch_name}"
+	else
+		zle clear-screen
 	fi
-	zle clear-screen
 }
 zle -N fzf-git-branch-checkout
 bindkey '^x^b' fzf-git-branch-checkout
